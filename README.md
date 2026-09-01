@@ -1,5 +1,12 @@
-# Martins Elektroroller
+# Rollerkompass
 
-Persönliche Kaufberatung, Tests und Vergleiche rund um Elektroroller, E-Chopper, Kabinenroller und Seniorenmobile.
+Öffentliche Website von Martin Dehn für ehrliche Vergleiche von E-Rollern, E-Choppern und Kabinenrollern.
 
-Die Seite wird von Grund auf neu aufgebaut. Fokus: hochwertige, Apple-inspirierte Gestaltung, echte Produkterfahrung, klare SEO-Struktur und transparente Affiliate-Links.
+Live: https://rollerkompass.de/
+
+## Inhalt
+
+- 41 Modelle mit Suche und Filtern
+- fünf Kabinenroller mit Empfehlung und ehrlichem Hinweis
+- Direktvergleich für bis zu drei Modelle
+- transparente Affiliate-Kennzeichnung und Herstellerquellen
