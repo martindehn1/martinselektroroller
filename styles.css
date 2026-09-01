@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 :root {
   --petrol: #173b39;
   --petrol-deep: #102e2c;
@@ -825,3 +823,4 @@ h1, h2, .detail-title {
   .detail-specs div + div { border-left: 0; border-top: 1px solid var(--line); }
   .transparency-mini .shell { grid-template-columns: 1fr; gap: 8px; }
 }
+
