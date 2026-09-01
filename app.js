@@ -86,6 +86,10 @@
 
   function card(product) {
     const selected = compare.includes(product.slug);
+    const offerLabel = product.offerLabel || "Angebot";
+    const offerRel = product.isAffiliate
+      ? "sponsored nofollow noopener noreferrer"
+      : "noopener noreferrer";
     const specs = [product.speed, product.range, product.power]
       .filter(Boolean)
       .map((spec) => `<span>${escapeHtml(spec)}</span>`)
@@ -123,12 +127,12 @@
           <div class="quick-specs">${specs}</div>
           <div class="product-footer">
             <div>
-              <small>${product.verifiedAt ? `Preis geprüft ${escapeHtml(product.verifiedAt)}` : "Preis laut Partnerliste"}</small>
+              <small>${product.verifiedAt ? `Preis geprüft ${escapeHtml(product.verifiedAt)}` : product.isAffiliate ? "Preis laut Partnerliste" : "Preis zuletzt erfasst"}</small>
               <strong>${formatPrice(product.price)}</strong>
             </div>
             <div class="product-actions">
               ${sourceLink}
-              <a class="round-action round-action-dark" href="${escapeHtml(product.affiliateUrl)}" target="_blank" rel="sponsored nofollow noopener noreferrer">Angebot ↗</a>
+              <a class="round-action round-action-dark" href="${escapeHtml(product.affiliateUrl)}" target="_blank" rel="${offerRel}">${escapeHtml(offerLabel)} ↗</a>
             </div>
           </div>
         </div>
@@ -154,7 +158,7 @@
               <div><dt>Reichweite</dt><dd>${escapeHtml(product.range || "Auf Angebotsseite prüfen")}</dd></div>
               <div><dt>Akku</dt><dd>${escapeHtml(product.battery || "Auf Angebotsseite prüfen")}</dd></div>
             </dl>
-            <a href="${escapeHtml(product.sourceUrl || product.affiliateUrl)}" target="_blank" rel="${product.sourceUrl ? "noopener noreferrer" : "sponsored nofollow noopener noreferrer"}">${product.sourceUrl ? "Quelle öffnen" : "Angebot öffnen"} →</a>
+            <a href="${escapeHtml(product.sourceUrl || product.affiliateUrl)}" target="_blank" rel="${product.sourceUrl || !product.isAffiliate ? "noopener noreferrer" : "sponsored nofollow noopener noreferrer"}">${product.sourceUrl ? "Quelle öffnen" : `${escapeHtml(product.offerLabel || "Angebot")} öffnen`} →</a>
           </article>`,
       )
       .join("");
@@ -287,3 +291,4 @@
 
   render();
 })();
+
