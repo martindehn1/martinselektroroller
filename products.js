@@ -683,4 +683,3 @@ window.PRODUCTS = [
     "offerLabel": "Angebot"
   }
 ];
-
