@@ -132,9 +132,10 @@
             </div>
             <div class="product-actions">
               ${sourceLink}
-              <a class="round-action round-action-dark" href="${escapeHtml(product.affiliateUrl)}" target="_blank" rel="${offerRel}">${escapeHtml(offerLabel)} ↗</a>
+              <a class="round-action round-action-dark" href="${escapeHtml(product.affiliateUrl)}" target="_blank" rel="${offerRel}" aria-label="${escapeHtml(offerLabel)} für ${escapeHtml(product.name)} bei Futura ansehen${product.isAffiliate ? ' (Affiliate-Link)' : ''}">${escapeHtml(offerLabel)} ↗</a>
             </div>
           </div>
+          ${product.isAffiliate ? '<p class="product-affiliate">Werbung · Affiliate-Link zum Anbieter</p>' : ''}
         </div>
       </article>`;
   }
@@ -194,7 +195,7 @@
                 category === "Alle"
                   ? products.length
                   : products.filter((product) => product.category === category).length;
-              return `<button class="category-tab${activeCategory === category ? " active" : ""}" data-category="${escapeHtml(category)}" type="button">${escapeHtml(category)} <span>${count}</span></button>`;
+              return `<button class="category-tab${activeCategory === category ? " active" : ""}" data-category="${escapeHtml(category)}" aria-pressed="${activeCategory === category}" type="button">${escapeHtml(category)} <span>${count}</span></button>`;
             })
             .join("")}
         </div>
@@ -204,7 +205,7 @@
           <span aria-hidden="true">⌕</span>
         </label>
       </div>
-      <p class="explorer-result">${filtered.length} ${filtered.length === 1 ? "Modell" : "Modelle"}${escapeHtml(resultDescription)}</p>
+      <p class="explorer-result" role="status" aria-live="polite">${filtered.length} ${filtered.length === 1 ? "Modell" : "Modelle"}${escapeHtml(resultDescription)}</p>
       <div class="product-grid">${visible.map(card).join("")}</div>
       ${
         filtered.length
@@ -270,14 +271,9 @@
     }
   });
 
-  document.addEventListener("click", (event) => {
-    const modelLink = event.target.closest("[data-model-link]");
-    if (!modelLink) return;
-    const product = products.find(
-      (candidate) => candidate.slug === modelLink.dataset.modelLink,
-    );
-    if (!product) return;
-    event.preventDefault();
+  function openModel(slug) {
+    const product = products.find((candidate) => candidate.slug === slug);
+    if (!product) return false;
     activeCategory = product.category;
     query = product.name;
     showAll = true;
@@ -285,9 +281,46 @@
     requestAnimationFrame(() => {
       document
         .getElementById(`modell-${product.slug}`)
-        ?.scrollIntoView({ behavior: "smooth", block: "center" });
+        ?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" });
     });
+    return true;
+  }
+
+  function openModelFromHash() {
+    const prefix = "#modell-";
+    if (!window.location.hash.startsWith(prefix)) return false;
+    return openModel(window.location.hash.slice(prefix.length));
+  }
+
+  document.addEventListener("click", (event) => {
+    const menuLink = event.target.closest(".mobile-nav a");
+    if (menuLink) menuLink.closest("details").open = false;
+
+    const categoryLink = event.target.closest("[data-category-link]");
+    if (categoryLink && categories.includes(categoryLink.dataset.categoryLink)) {
+      activeCategory = categoryLink.dataset.categoryLink;
+      query = "";
+      showAll = false;
+      render();
+      // Keep the anchor's native navigation and browser history.
+      return;
+    }
+
+    const modelLink = event.target.closest("[data-model-link]");
+    if (!modelLink || !openModel(modelLink.dataset.modelLink)) return;
+    event.preventDefault();
+    const hash = `#modell-${modelLink.dataset.modelLink}`;
+    if (window.location.hash !== hash) window.history.pushState(null, "", hash);
   });
 
-  render();
+  document.addEventListener("keydown", (event) => {
+    const menu = document.querySelector(".mobile-nav[open]");
+    if (event.key === "Escape" && menu) {
+      menu.open = false;
+      menu.querySelector("summary").focus();
+    }
+  });
+
+  window.addEventListener("hashchange", openModelFromHash);
+  if (!openModelFromHash()) render();
 })();
