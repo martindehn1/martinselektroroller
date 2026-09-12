@@ -76,8 +76,8 @@ h1, h2, h3, h4, .brand-word { font-family: inherit !important; }
 .hero-about:hover { text-decoration: underline; }
 .hero-about span { margin-left: 12px; }
 .hero-photo { min-width: 0; margin: 0; overflow: hidden; border-radius: 22px; background: #fff; box-shadow: 0 8px 28px #1239680a; }
-.hero-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; }
-.hero-photo figcaption { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 10px; padding: 11px 16px; color: #415a78; font-size: 12px; line-height: 1.45; }
+.hero-photo img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 75%; }
+.hero-photo figcaption { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 10px; padding: 11px 16px; color: #415a78; font-size: 14px; line-height: 1.45; }
 .hero-photo figcaption strong { color: #183c68; }
 .trust-strip { min-height: 65px; border: 0; gap: 18px; color: #596b82; font-size: 13px; }
 .trust-strip > * { text-align: center; }
@@ -122,7 +122,7 @@ h1, h2, h3, h4, .brand-word { font-family: inherit !important; }
  .hero-actions { flex-direction: column; align-items: flex-start; gap: 15px; }
  .hero-actions .button { padding-inline: 19px; font-size: 13px; min-height: 50px; }
  .hero-photo { border-radius: 15px; }
- .hero-photo figcaption { padding: 10px 12px; font-size: 11px; }
+ .hero-photo figcaption { padding: 10px 12px; font-size: 14px; }
  .trust-strip { grid-template-columns: 1fr; gap: 5px; padding-block: 15px; min-height: 0; }
  .trust-strip > * { padding: 0; text-align: left; }
 }
@@ -397,3 +397,27 @@ h1, h2, h3, h4, .brand-word { font-family: inherit !important; }
  .footer-bottom { flex-direction: column; }
  .transparency-section { padding-top: 0; }
 }
+
+/* Original photography: responsive images retain their full composition. */
+.martin-portrait { margin: 0; overflow: hidden; background: #fff; border: 1px solid #dce7f4; border-radius: 22px; }
+.martin-portrait img { display: block; width: 100%; height: auto; }
+.martin-portrait figcaption { display: grid; gap: 5px; padding: 18px 22px; font-size: 14px; line-height: 1.5; color: #48607e; }
+.martin-portrait figcaption strong { font-size: 18px; color: #153c6b; }
+.practice-photos { margin-top: 64px; }
+.practice-photos h3 { margin: 0 0 14px; font-size: clamp(28px, 3.5vw, 42px); line-height: 1.15; letter-spacing: -.03em; }
+.practice-photos .section-heading > p:last-child { max-width: 650px; font-size: 16px; line-height: 1.65; color: #48607e; }
+.practice-photo-grid { columns: 3; column-gap: 22px; }
+.practice-photo-grid figure { break-inside: avoid; margin: 0 0 22px; overflow: hidden; border: 1px solid #dce7f4; border-radius: 16px; background: #fff; }
+.practice-photo-grid img { display: block; width: 100%; height: auto; }
+.practice-photo-grid figcaption { padding: 14px 16px; font-size: 16px; line-height: 1.5; font-weight: 600; color: #183c68; }
+.photo-archive-note { max-width: 780px; margin: 16px 0 0; font-size: 14px; line-height: 1.65; color: #48607e; }
+@media (max-width: 900px) { .practice-photo-grid { columns: 2; } }
+@media (max-width: 540px) { .practice-photo-grid { columns: 1; } .practice-photos { margin-top: 40px; } }
+
+/* A separate photo print keeps the inset sharp and its caption accessible. */
+.hero-photo-stage { position: relative; isolation: isolate; background: #eaf3ff; }
+.hero-photo-stage .hero-photo-main { aspect-ratio: 1 / 1; object-fit: contain; object-position: center; }
+.hero-photo-inset { position: absolute; z-index: 1; top: 4%; left: 3%; width: 30%; max-width: 225px; margin: 0; padding: clamp(5px, 1vw, 9px); overflow: hidden; background: #fffefb; border: 1px solid #e9e8e2; border-radius: 2px; box-shadow: 0 10px 24px #14355730, 0 2px 4px #14355715; transform: rotate(-5deg); }
+.hero-photo-inset img { aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 75%; }
+.hero-photo .hero-photo-inset figcaption { display: block; padding: clamp(10px, 1.5vw, 18px) 0 5px; color: #204668; font-family: "Bradley Hand", "Segoe Print", Georgia, serif; font-size: clamp(14px, 1.3vw, 18px); font-weight: 600; line-height: 1.3; text-align: center; }
+@media (max-width: 540px) { .hero-photo-inset { top: 3%; left: 3%; width: 32%; } .hero-photo .hero-photo-inset figcaption { padding-top: 10px; font-size: 12px; } }

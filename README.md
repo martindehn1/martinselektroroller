@@ -15,15 +15,17 @@ Live: https://rollerkompass.de/
 
 Die Startseite folgt Design 3: Weiß, kräftiges Blau, persönliche Ansprache,
 ein großes Gruppenmotiv sowie lesbare Modellchecks und Ratgeber. Auf kleinen
-Bildschirmen bleibt das Gruppenmotiv vollständig sichtbar; die Navigation ist
+Bildschirmen bleiben die Personen und das Fahrzeug im Mittelpunkt; die Navigation ist
 über das Menü erreichbar.
 
-Das aktuelle Gruppenmotiv ist eine **KI-Visualisierung mit einer Beispielperson,
-kein echtes Foto von Martin**. Diese Kennzeichnung steht sichtbar am Bild.
-Die Dateien `assets/hero-kabinenroller.webp` (1536 px) und
-`assets/hero-kabinenroller-960.webp` (960 px) werden später durch Martins
-echtes Gruppenfoto ersetzt. Anschließend Bildbeschreibung und Bildunterschrift
-in `index.html` anpassen. Das Seitenlayout muss dafür nicht umgebaut werden.
+Die Startseite zeigt Martin und Luca auf einem Lastendreirad, ergänzt um ein
+kleines gemeinsames Kabinenroller-Foto im Polaroid-Rahmen. Das Hauptmotiv ist
+eine KI-gestützte Fotobearbeitung mit blau-türkisem Hintergrund; das Polaroid
+und die Archivfotos zeigen die Originalaufnahmen. Der persönliche
+Bereich enthält ein echtes Portrait mit Fahrzeug sowie sechs Fotos aus Martins
+Archiv. Die WebP-Dateien haben responsive Auflösungen; die Originale bleiben
+außerhalb des veröffentlichten Repositorys. Fahrzeugfotos aus dem Archiv werden
+nicht als Nachweis für aktuelle Modellvarianten oder Tests verwendet.
 
 ## Lokal und Veröffentlichung
 
