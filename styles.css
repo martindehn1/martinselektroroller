@@ -50,7 +50,7 @@ p { margin: 0 0 16px; }
 }
 body { font-family: "Avenir Next", "Segoe UI", Arial, sans-serif; line-height: 1.5; }
 h1, h2, h3, h4, .brand-word { font-family: inherit !important; }
-.shell { width: min(1320px, calc(100% - 64px)); }
+.shell { width: min(1320px, calc(100% - 64px)); margin-inline: auto; }
 .skip-link { position: fixed; z-index: 100; top: 8px; left: 8px; transform: translateY(-160%); padding: 12px 20px; background: var(--petrol); color: #fff; border-radius: 8px; }
 .skip-link:focus { transform: none; }
 [id] { scroll-margin-top: 24px; }
