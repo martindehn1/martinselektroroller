@@ -6,7 +6,7 @@ Live: https://rollerkompass.de/
 
 ## Inhalt
 
-- 44 Modelle mit Suche und Filtern, darunter sechs Kabinenroller und zwei Seniorenmobile
+- 43 Modelle mit Suche und Filtern, darunter sechs Kabinenroller und zwei Seniorenmobile
 - fünf Kabinenroller mit Empfehlung und ehrlichem Hinweis
 - Direktvergleich für bis zu drei Modelle
 - transparente Affiliate-Kennzeichnung und Herstellerquellen
@@ -44,3 +44,11 @@ Vita Care Neo wurden anhand der offiziellen Futura-Seiten am 12.09.2026 ergänzt
 Die drei neuen Angebotslinks sind direkte Herstellerlinks ohne Affiliate-Zusatz.
 Das separate Porträt zeigt Martin im Vorstellungsbereich. Neue Aufnahmen können
 über die optionalen `personalPhoto`-Felder in `products.js` ausgetauscht werden.
+
+## Herstellerbilder
+
+Fehlende Fahrzeugfotos wurden am 12.09.2026 mit den offiziellen Futura-Galerien
+abgeglichen. Die für die Modellkarten verwendeten Herstellerbilder liegen als
+WebP im lokalen Asset-Verzeichnis. `imageSourcePage` und `imageSourceUrl` in
+`products.js` dokumentieren die Herkunft; ein `imageNote` kennzeichnet ältere
+Modellfotos. Die Kategorie „125er“ wurde als irrtümliche Einzelmodellkarte entfernt.

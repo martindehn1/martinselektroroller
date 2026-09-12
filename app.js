@@ -103,7 +103,7 @@
           <figcaption>Mit Martin vor Ort</figcaption>
         </figure>`
       : product.image
-      ? `<img alt="${escapeHtml(product.name)} Elektroroller" loading="lazy" src="${escapeHtml(product.image)}">`
+      ? `<img alt="${escapeHtml(product.name)} – Herstellerfoto" loading="lazy" decoding="async" src="${escapeHtml(product.image)}"${product.imageWidth && product.imageHeight ? ` width="${Number(product.imageWidth)}" height="${Number(product.imageHeight)}"` : ""}>`
       : `<div class="product-monogram" aria-hidden="true">${escapeHtml(initials(product.name))}</div>`;
     const recommendation = product.recommendation
       ? `<p class="product-recommendation">${escapeHtml(product.recommendation)}</p>`
@@ -132,6 +132,7 @@
           <h3>${escapeHtml(product.name)}</h3>
           <p class="product-fullname">${escapeHtml(product.fullName)}</p>
           ${product.personalPhoto ? `<p class="product-photo-note">${escapeHtml(product.personalPhoto.note)}</p>` : ""}
+          ${!product.personalPhoto && product.imageNote ? `<p class="product-photo-note">${escapeHtml(product.imageNote)}</p>` : ""}
           ${recommendation}
           <div class="quick-specs">${specs}</div>
           <div class="product-footer">

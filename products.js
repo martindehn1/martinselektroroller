@@ -1,21 +1,5 @@
 window.PRODUCTS = [
   {
-    "id": 3402,
-    "slug": "125er",
-    "name": "125er",
-    "fullName": "125er Elektroroller",
-    "category": "Highspeed & 125er",
-    "price": 2966,
-    "speed": null,
-    "range": null,
-    "power": null,
-    "battery": null,
-    "image": null,
-    "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/125er?affp=17205",
-    "isAffiliate": true,
-    "offerLabel": "Angebot"
-  },
-  {
     "id": 3171,
     "slug": "raven",
     "name": "Raven",
@@ -26,10 +10,14 @@ window.PRODUCTS = [
     "range": "bis zu 100 km",
     "power": "bis zu 3.000 W",
     "battery": "60 V / 40 Ah Lithium",
-    "image": "https://elektroroller-futura.de/img/p/1/9/7/7/8/19778.jpg",
+    "image": "assets/futura-raven.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-chopper-raven?affp=17205#/farbe-light_grey/anzahl_lithium_ionen_akkus-60v_40ah_100km_reichweite",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 581,
+    "imageSourceUrl": "https://elektroroller-futura.de/img/p/1/9/7/7/8/19778.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-chopper-raven"
   },
   {
     "id": 1801,
@@ -42,10 +30,14 @@ window.PRODUCTS = [
     "range": null,
     "power": null,
     "battery": "Samsung-Lithium-Akku",
-    "image": null,
+    "image": "assets/futura-angry-blake.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-chopper-x10?affp=17205#/farbe-schwarz",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 800,
+    "imageSourceUrl": "https://elektroroller-futura.de/15118-thickbox_default/e-scooter-chopper-x10.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-chopper-x10"
   },
   {
     "id": 1867,
@@ -82,10 +74,14 @@ window.PRODUCTS = [
     "range": "bis zu 120 km",
     "power": "3.000 W",
     "battery": "56 Ah Lithium",
-    "image": "https://elektroroller-futura.de/img/p/1/6/8/7/9/16879.jpg",
+    "image": "assets/futura-hl-6-premium-duo.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-6-premium-duo?affp=17205#/farbe-mattschwarz",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 800,
+    "imageSourceUrl": "https://elektroroller-futura.de/img/p/1/6/8/7/9/16879.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-6-premium-duo"
   },
   {
     "id": 2984,
@@ -98,10 +94,14 @@ window.PRODUCTS = [
     "range": "bis zu 120 km",
     "power": "3.000 W",
     "battery": "60 V / 56,5 Ah Lithium",
-    "image": "https://elektroroller-futura.de/img/p/1/6/8/7/9/16879.jpg",
+    "image": "assets/futura-hl-6-premium.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-6-premium?affp=17205#/farbe-mattschwarz",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 800,
+    "imageSourceUrl": "https://elektroroller-futura.de/img/p/1/6/8/7/9/16879.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-6-premium"
   },
   {
     "id": 1000,
@@ -114,10 +114,14 @@ window.PRODUCTS = [
     "range": "bis zu 70 km",
     "power": "3.000 W",
     "battery": "60 V / 30 Ah Lithium",
-    "image": null,
+    "image": "assets/futura-hl-6.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-chopper-11?affp=17205#/farbe-bordeaux_rot/geschwindigkeit_auswahlen-45_km_h",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 800,
+    "imageSourceUrl": "https://elektroroller-futura.de/15124-thickbox_default/e-scooter-chopper-11.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-chopper-11"
   },
   {
     "id": 3214,
@@ -130,10 +134,14 @@ window.PRODUCTS = [
     "range": null,
     "power": "3.000 W",
     "battery": "60 V / 55 Ah Lithium",
-    "image": null,
+    "image": "assets/futura-hl-6-android.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-chopper-6-android?affp=17205#/farbe-mattschwarz/geschwindigkeit_auswahlen-45_km_h/lithium_akku_-hl_60_55ah_60v_lithium_akku",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 800,
+    "imageSourceUrl": "https://elektroroller-futura.de/17963-thickbox_default/e-scooter-chopper-6-android.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-chopper-6-android"
   },
   {
     "id": 1382,
@@ -146,7 +154,7 @@ window.PRODUCTS = [
     "range": "bis zu 60 / 120 km",
     "power": "bis zu 2.000 W",
     "battery": "60 V / 52 Ah Lithium, entnehmbar",
-    "image": "https://elektroroller-futura.de/12413-home_default_2x/elektro-kabinenroller-two.jpg",
+    "image": "assets/futura-futura-two-li.webp",
     "affiliateUrl": "https://elektroroller-futura.de/futura-two-futura-30",
     "sourceLabel": "Elektroroller Futura",
     "sourceUrl": "https://elektroroller-futura.de/futura-two-futura-30",
@@ -154,7 +162,11 @@ window.PRODUCTS = [
     "caveat": "Mit 1,07 Meter Breite und Rückbank anders zu fahren als ein klassischer Roller – Probefahrt einplanen.",
     "verifiedAt": "September 2026",
     "isAffiliate": false,
-    "offerLabel": "Modellübersicht"
+    "offerLabel": "Modellübersicht",
+    "imageWidth": 544,
+    "imageHeight": 620,
+    "imageSourceUrl": "https://elektroroller-futura.de/12413-home_default_2x/elektro-kabinenroller-two.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/futura-two-futura-30"
   },
   {
     "id": 2897,
@@ -191,10 +203,14 @@ window.PRODUCTS = [
     "range": "bis zu 50 km",
     "power": "800 W",
     "battery": "48 V / 20 Ah Blei-Gel",
-    "image": "https://elektroroller-futura.de/img/p/2/0/0/8/7/20087.jpg",
+    "image": "assets/futura-campster.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-campster-25-kmh-wohnmobil?affp=17205",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 775,
+    "imageSourceUrl": "https://elektroroller-futura.de/img/p/2/0/0/8/7/20087.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-campster-25-kmh-wohnmobil"
   },
   {
     "id": 2501,
@@ -207,10 +223,14 @@ window.PRODUCTS = [
     "range": "bis zu 90 km",
     "power": "1.200 W",
     "battery": "48 V / 30 Ah LiFePO₄",
-    "image": "https://elektroroller-futura.de/img/p/1/9/1/0/2/19102.jpg",
+    "image": "assets/futura-city-go.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-merlin?affp=17205#/farbe-mattschwarz/geschwindigkeit_auswahlen-45_km_h",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 800,
+    "imageSourceUrl": "https://elektroroller-futura.de/img/p/1/9/1/0/2/19102.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-merlin"
   },
   {
     "id": 86,
@@ -271,10 +291,14 @@ window.PRODUCTS = [
     "range": null,
     "power": "4.000 W",
     "battery": "72 V / 50 Ah Lithium",
-    "image": null,
+    "image": "assets/futura-future-s.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-future-s?affp=17205#/farbe-gelb",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 800,
+    "imageSourceUrl": "https://elektroroller-futura.de/18932-thickbox_default/elektroroller-future-s.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-future-s"
   },
   {
     "id": 2634,
@@ -287,10 +311,14 @@ window.PRODUCTS = [
     "range": "bis zu 90 km",
     "power": "3.000 W",
     "battery": "72 V / 26 Ah Lithium",
-    "image": "https://elektroroller-futura.de/img/p/1/8/8/1/0/18810.jpg",
+    "image": "assets/futura-future.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-future?affp=17205#/geschwindigkeit_auswahlen-45_km_h/farbe-gelb",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 480,
+    "imageSourceUrl": "https://elektroroller-futura.de/img/p/1/8/8/1/0/18810.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-future"
   },
   {
     "id": 3566,
@@ -303,10 +331,14 @@ window.PRODUCTS = [
     "range": "bis zu 85 km",
     "power": null,
     "battery": "60 V / 32 Ah Blei-Gel",
-    "image": null,
+    "image": "assets/futura-long-runner-blei.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-long-runner-blei?affp=17205#/farbe-mattschwarz/geschwindigkeit_auswahlen-25_km_h",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 800,
+    "imageSourceUrl": "https://elektroroller-futura.de/19882-thickbox_default/elektroroller-long-runner-blei.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-long-runner-blei"
   },
   {
     "id": 2889,
@@ -319,10 +351,14 @@ window.PRODUCTS = [
     "range": "bis zu 80 km",
     "power": "bis zu 2.800 W",
     "battery": "60 V / 30 Ah Lithium",
-    "image": "https://elektroroller-futura.de/img/p/1/7/2/8/9/17289.jpg",
+    "image": "assets/futura-long-runner-lithium.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-long-runner?affp=17205#/farbe-mattschwarz/geschwindigkeit_auswahlen-45_km_h/anzahl_lithium_ionen_akkus-1_x_li_akku_60v_30ah_80_km_reichweite",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 682,
+    "imageSourceUrl": "https://elektroroller-futura.de/img/p/1/7/2/8/9/17289.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-long-runner"
   },
   {
     "id": 3587,
@@ -335,10 +371,14 @@ window.PRODUCTS = [
     "range": "bis zu 80 km",
     "power": "3.400 W",
     "battery": "72 V / 20 Ah Lithium",
-    "image": null,
+    "image": "assets/futura-volt-max.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/volt-max?affp=17205#/farbe-grun/geschwindigkeit_auswahlen-45_km_h/anzahl_lithium_ionen_akkus-1_lithium_akku_80_km_reichweite",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 800,
+    "imageSourceUrl": "https://elektroroller-futura.de/19974-thickbox_default/volt-max.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/volt-max"
   },
   {
     "id": 1293,
@@ -351,10 +391,14 @@ window.PRODUCTS = [
     "range": null,
     "power": null,
     "battery": null,
-    "image": null,
+    "image": "assets/futura-e-groove.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-power?affp=17205",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 568,
+    "imageHeight": 649,
+    "imageSourceUrl": "https://elektroroller-futura.de/11762-big_default/e-scooter-power.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-power"
   },
   {
     "id": 3090,
@@ -367,10 +411,14 @@ window.PRODUCTS = [
     "range": null,
     "power": "6.000 W",
     "battery": "72 V / 34 Ah Lithium",
-    "image": null,
+    "image": "assets/futura-m300-eec.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/elektro-enduro-strassenzulassung?affp=17205",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 568,
+    "imageHeight": 649,
+    "imageSourceUrl": "https://elektroroller-futura.de/17449-big_default/elektro-enduro-strassenzulassung.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/elektro-enduro-strassenzulassung"
   },
   {
     "id": 3417,
@@ -383,10 +431,14 @@ window.PRODUCTS = [
     "range": null,
     "power": null,
     "battery": null,
-    "image": null,
+    "image": "assets/futura-volt-ranger.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/volt-ranger?affp=17205",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 568,
+    "imageHeight": 649,
+    "imageSourceUrl": "https://elektroroller-futura.de/18895-big_default/volt-ranger.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/volt-ranger"
   },
   {
     "id": 1156,
@@ -471,10 +523,14 @@ window.PRODUCTS = [
     "range": null,
     "power": null,
     "battery": "Blei-Gel",
-    "image": null,
+    "image": "assets/futura-futura-hawk.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-hawk-blei-gel-akku?affp=17205#/farbe-mattschwarz",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 800,
+    "imageSourceUrl": "https://elektroroller-futura.de/5479-thickbox_default/elektroroller-hawk-blei-gel-akku.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-hawk-blei-gel-akku"
   },
   {
     "id": 1275,
@@ -487,10 +543,14 @@ window.PRODUCTS = [
     "range": null,
     "power": "3.000 W",
     "battery": "60 V / 30 Ah Lithium",
-    "image": null,
+    "image": "assets/futura-hl-6-sale.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-chopper-6?affp=17205#/farbe-mattschwarz/geschwindigkeit_auswahlen-45_km_h/lithium_akku_-hl_60_30ah_60v_lithium_akku",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 800,
+    "imageSourceUrl": "https://elektroroller-futura.de/15120-thickbox_default/e-scooter-chopper-6.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-chopper-6"
   },
   {
     "id": 3233,
@@ -503,10 +563,14 @@ window.PRODUCTS = [
     "range": null,
     "power": null,
     "battery": null,
-    "image": null,
+    "image": "assets/futura-thunder-s.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/thunder?affp=17205#/farbe-light_grey",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 568,
+    "imageHeight": 649,
+    "imageSourceUrl": "https://elektroroller-futura.de/18037-big_default/thunder.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/thunder"
   },
   {
     "id": 417,
@@ -519,10 +583,14 @@ window.PRODUCTS = [
     "range": null,
     "power": null,
     "battery": null,
-    "image": null,
+    "image": "assets/futura-angry-hawk.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-e-motorrad?affp=17205#/farbe-light_grey",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 800,
+    "imageSourceUrl": "https://elektroroller-futura.de/10709-thickbox_default/elektroroller-e-motorrad.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-e-motorrad"
   },
   {
     "id": 3203,
@@ -535,10 +603,14 @@ window.PRODUCTS = [
     "range": "bis zu 90 km",
     "power": null,
     "battery": "30 Ah",
-    "image": "https://elektroroller-futura.de/img/p/1/9/1/0/2/19102.jpg",
+    "image": "assets/futura-city-go-rs.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-merlin?affp=17205#/farbe-bordeaux_rot/geschwindigkeit_auswahlen-45_km_h",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 800,
+    "imageSourceUrl": "https://elektroroller-futura.de/img/p/1/9/1/0/2/19102.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-merlin"
   },
   {
     "id": 266,
@@ -551,10 +623,14 @@ window.PRODUCTS = [
     "range": null,
     "power": null,
     "battery": null,
-    "image": null,
+    "image": "assets/futura-robo-s.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-robo-s?affp=17205#/farbe-schwarz",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 800,
+    "imageSourceUrl": "https://elektroroller-futura.de/15010-thickbox_default/elektroroller-robo-s.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-robo-s"
   },
   {
     "id": 87,
@@ -567,11 +643,15 @@ window.PRODUCTS = [
     "range": null,
     "power": "2.000 W",
     "battery": "Blei-Gel",
-    "image": null,
+    "image": "assets/futura-eagle.webp",
     "affiliateUrl": "https://elektroroller-futura.de/eagle-one",
     "isAffiliate": false,
     "offerLabel": "Modellübersicht",
-    "sourceUrl": "https://elektroroller-futura.de/eagle-one"
+    "sourceUrl": "https://elektroroller-futura.de/eagle-one",
+    "imageWidth": 800,
+    "imageHeight": 800,
+    "imageSourceUrl": "https://elektroroller-futura.de/13183-thickbox_default/elektroroller-eagle.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-eagle"
   },
   {
     "id": 1324,
@@ -584,10 +664,14 @@ window.PRODUCTS = [
     "range": "bis zu 75 km",
     "power": "3.000 W",
     "battery": "60 V / 30 Ah Lithium",
-    "image": "https://elektroroller-futura.de/img/p/1/8/1/0/9/18109.jpg",
+    "image": "assets/futura-x9-plus-30ah.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-chopper-x9-30ah?affp=17205#/farbe-mattschwarz/geschwindigkeit_auswahlen-45_km_h/anzahl_lithium_ionen_akkus-60v_30ah_75km_reichweite",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 610,
+    "imageSourceUrl": "https://elektroroller-futura.de/img/p/1/8/1/0/9/18109.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-chopper-x9-30ah"
   },
   {
     "id": 3247,
@@ -600,10 +684,14 @@ window.PRODUCTS = [
     "range": "bis zu 50 km",
     "power": "bis zu 3.000 W",
     "battery": "60 V / 20 Ah Lithium",
-    "image": "https://elektroroller-futura.de/img/p/1/8/1/0/9/18109.jpg",
+    "image": "assets/futura-x9-plus-20ah.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-chopper-x9-20?affp=17205",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 610,
+    "imageSourceUrl": "https://elektroroller-futura.de/img/p/1/8/1/0/9/18109.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-chopper-x9-20"
   },
   {
     "id": 131,
@@ -616,11 +704,16 @@ window.PRODUCTS = [
     "range": null,
     "power": "2.000 W",
     "battery": "Lithium",
-    "image": null,
+    "image": "assets/futura-eagle-li.webp",
     "affiliateUrl": "https://elektroroller-futura.de/eagle-one",
     "isAffiliate": false,
     "offerLabel": "Modellübersicht",
-    "sourceUrl": "https://elektroroller-futura.de/eagle-one"
+    "sourceUrl": "https://elektroroller-futura.de/eagle-one",
+    "imageWidth": 800,
+    "imageHeight": 800,
+    "imageSourceUrl": "https://elektroroller-futura.de/20077-thickbox_default/elektroroller-eagle-li-2.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/schnaeppchen-vorfuehr-elektro-roller/elektroroller-eagle-li-2",
+    "imageNote": "Herstellerfoto der Modellreihe aus dem Futura-Archiv."
   },
   {
     "id": 402,
@@ -657,10 +750,14 @@ window.PRODUCTS = [
     "range": "bis zu 60 km",
     "power": null,
     "battery": "Lithium",
-    "image": null,
+    "image": "assets/futura-elettrico-2.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-elettrico-2?affp=17205#/geschwindigkeit_auswahlen-45_km_h/farbe-weiss/anzahl_lithium_ionen_akkus-1_lithium_ionen_akku_60km_reichweite_000_",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 800,
+    "imageSourceUrl": "https://elektroroller-futura.de/7743-thickbox_default/elektroroller-elettrico-2.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-elettrico-2"
   },
   {
     "id": 4101,
@@ -673,7 +770,7 @@ window.PRODUCTS = [
     "range": "bis zu 70 / 140 km",
     "power": "2.000 W",
     "battery": "60 V / 52 Ah Lithium, entnehmbar",
-    "image": null,
+    "image": "assets/futura-futura-3-li.webp",
     "affiliateUrl": "https://elektroroller-futura.de/futura-two-futura-30",
     "sourceLabel": "Elektroroller Futura",
     "sourceUrl": "https://elektroroller-futura.de/futura-two-futura-30",
@@ -681,7 +778,12 @@ window.PRODUCTS = [
     "caveat": "Drei Räder und hoher Aufbau verlangen eine besonders bewusste Probefahrt.",
     "verifiedAt": "September 2026",
     "isAffiliate": false,
-    "offerLabel": "Modellübersicht"
+    "offerLabel": "Modellübersicht",
+    "imageWidth": 568,
+    "imageHeight": 649,
+    "imageSourceUrl": "https://elektroroller-futura.de/12338-big_default/elektro-kabinenroller-futura-li.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/elektro-kabinenroller-futura-li",
+    "imageNote": "Herstellerfoto des Futura 3.0 Li aus dem Futura-Archiv."
   },
   {
     "id": 4102,
@@ -694,7 +796,7 @@ window.PRODUCTS = [
     "range": "bis zu 70 / 140 km",
     "power": "2.200 W",
     "battery": "60 V / 60 Ah Lithium, entnehmbar",
-    "image": "https://elektroroller-futura.de/15715-big_default/elektro-kabinenroller-cruise-li.jpg",
+    "image": "assets/futura-cruise-li.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/elektro-kabinenroller-cruise-li",
     "sourceLabel": "Elektroroller Futura",
     "sourceUrl": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/elektro-kabinenroller-cruise-li",
@@ -702,7 +804,11 @@ window.PRODUCTS = [
     "caveat": "Zweitakku, Ausstattung und tatsächliche Lieferkonfiguration vor dem Kauf genau abgleichen.",
     "verifiedAt": "September 2026",
     "isAffiliate": false,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 568,
+    "imageHeight": 649,
+    "imageSourceUrl": "https://elektroroller-futura.de/15715-big_default/elektro-kabinenroller-cruise-li.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/elektro-kabinenroller-cruise-li"
   },
   {
     "id": 4103,
@@ -715,7 +821,7 @@ window.PRODUCTS = [
     "range": "bis zu 70 km",
     "power": "2.000 W",
     "battery": "60 V / 45 Ah Blei-Gel",
-    "image": null,
+    "image": "assets/futura-e-move.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/elektro-kabinenroller-e-move",
     "sourceLabel": "Elektroroller Futura",
     "sourceUrl": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/elektro-kabinenroller-e-move",
@@ -723,7 +829,11 @@ window.PRODUCTS = [
     "caveat": "Der feste Blei-Gel-Akku braucht einen geeigneten Stellplatz mit erreichbarer Steckdose.",
     "verifiedAt": "September 2026",
     "isAffiliate": false,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 568,
+    "imageHeight": 649,
+    "imageSourceUrl": "https://elektroroller-futura.de/19035-big_default/elektro-kabinenroller-e-move.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/elektro-kabinenroller-e-move"
   },
   {
     "id": 4104,
@@ -736,7 +846,7 @@ window.PRODUCTS = [
     "range": "bis zu 70 km",
     "power": "3.000 W",
     "battery": "72 V / 55 Ah Lithium, entnehmbar",
-    "image": "https://elektroroller-futura.de/19820-thickbox_default/kabinenroller-limaq7-li-45-kmh-lithium-akku-3000-watt.jpg",
+    "image": "assets/futura-limaq7-li.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektro-kabinenroller-futura/kabinenroller-limaq7-li-45-kmh-lithium-akku-3000-watt",
     "sourceLabel": "Elektroroller Futura",
     "sourceUrl": "https://elektroroller-futura.de/shop/elektro-kabinenroller-futura/kabinenroller-limaq7-li-45-kmh-lithium-akku-3000-watt",
@@ -744,7 +854,11 @@ window.PRODUCTS = [
     "caveat": "Mit rund 1,25 Meter Breite vorher Stellplatz, Toreinfahrt und typische Wege ausmessen.",
     "verifiedAt": "September 2026",
     "isAffiliate": false,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "imageWidth": 800,
+    "imageHeight": 800,
+    "imageSourceUrl": "https://elektroroller-futura.de/19820-thickbox_default/kabinenroller-limaq7-li-45-kmh-lithium-akku-3000-watt.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektro-kabinenroller-futura/kabinenroller-limaq7-li-45-kmh-lithium-akku-3000-watt"
   },
   {
     "id": 3163,
