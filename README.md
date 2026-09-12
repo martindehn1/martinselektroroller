@@ -45,6 +45,13 @@ Die drei neuen Angebotslinks sind direkte Herstellerlinks ohne Affiliate-Zusatz.
 Das separate Porträt zeigt Martin im Vorstellungsbereich. Neue Aufnahmen können
 über die optionalen `personalPhoto`-Felder in `products.js` ausgetauscht werden.
 
+Die Originalfotos füllen die gesamte Kartenbreite ohne Polaroid-Rahmen. Ein
+quadratischer Ausschnitt reduziert freien Himmel und rückt Person und Fahrzeug
+näher heran. Blake verwendet mit `personalPhoto.framing: "portrait"` einen
+4:5-Ausschnitt, damit Helm und Vorderrad sichtbar bleiben. Personen und Fahrzeuge
+werden nicht durch KI verändert; die erprobten KI-Erweiterungen sind nicht Teil
+der veröffentlichten Produktfotos. Der kleine Polaroid im Startmotiv bleibt erhalten.
+
 ## Herstellerbilder
 
 Fehlende Fahrzeugfotos wurden am 12.09.2026 mit den offiziellen Futura-Galerien

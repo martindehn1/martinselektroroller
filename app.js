@@ -98,10 +98,7 @@
       .map((spec) => `<span>${escapeHtml(spec)}</span>`)
       .join("");
     const visual = product.personalPhoto
-      ? `<figure class="product-photo-print">
-          <img alt="${escapeHtml(product.personalPhoto.alt)}" loading="lazy" decoding="async" src="${escapeHtml(product.personalPhoto.src)}" srcset="${escapeHtml(product.personalPhoto.srcset)}" sizes="(max-width: 540px) 80vw, 260px" width="${Number(product.personalPhoto.width)}" height="${Number(product.personalPhoto.height)}">
-          <figcaption>Mit Martin vor Ort</figcaption>
-        </figure>`
+      ? `<img class="product-personal-image${product.personalPhoto.framing === "portrait" ? " product-personal-image-tall" : ""}" alt="${escapeHtml(product.personalPhoto.alt)}" loading="lazy" decoding="async" src="${escapeHtml(product.personalPhoto.src)}" srcset="${escapeHtml(product.personalPhoto.srcset)}" sizes="(max-width: 560px) calc(100vw - 32px), (max-width: 620px) calc(100vw - 40px), (max-width: 900px) calc((100vw - 62px) / 2), (max-width: 1100px) calc((100vw - 86px) / 2), 425px" width="${Number(product.personalPhoto.width)}" height="${Number(product.personalPhoto.height)}">`
       : product.image
       ? `<img alt="${escapeHtml(product.name)} – Herstellerfoto" loading="lazy" decoding="async" src="${escapeHtml(product.image)}"${product.imageWidth && product.imageHeight ? ` width="${Number(product.imageWidth)}" height="${Number(product.imageHeight)}"` : ""}>`
       : `<div class="product-monogram" aria-hidden="true">${escapeHtml(initials(product.name))}</div>`;

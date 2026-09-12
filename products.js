@@ -281,6 +281,7 @@ window.PRODUCTS = [
     "offerLabel": "Angebot",
     "personalPhoto": {
       "src": "assets/produkt-blake-960.webp",
+      "framing": "portrait",
       "srcset": "assets/produkt-blake-480.webp 480w, assets/produkt-blake-960.webp 960w",
       "width": 3024,
       "height": 4032,
