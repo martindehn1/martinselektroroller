@@ -52,3 +52,13 @@ abgeglichen. Die für die Modellkarten verwendeten Herstellerbilder liegen als
 WebP im lokalen Asset-Verzeichnis. `imageSourcePage` und `imageSourceUrl` in
 `products.js` dokumentieren die Herkunft; ein `imageNote` kennzeichnet ältere
 Modellfotos. Die Kategorie „125er“ wurde als irrtümliche Einzelmodellkarte entfernt.
+
+## Reihenfolge der Modelle
+
+Die Modellübersicht steht direkt nach dem Einstieg. Flow Li, VitaCare Neo und
+Falcon Blei führen die Übersicht an, gefolgt von Vita Care 4000, Falcon Double
+und weiteren Kabinenrollern. Die Priorisierung beruht auf Martins Rückmeldungen
+zu Futura-Nachfrage und Klicks. Die Reihenfolge in `products.js` gilt auch in
+den Kategoriefiltern; das initiale HTML bildet dieselbe Reihenfolge ab.
+Im ausführlichen Kabinenroller-Fokus steht der Flow vor Cruise, LimaQ7,
+FUTURA TWO und E-Move.
