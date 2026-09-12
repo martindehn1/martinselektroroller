@@ -6,7 +6,7 @@ Live: https://rollerkompass.de/
 
 ## Inhalt
 
-- 41 Modelle mit Suche und Filtern
+- 44 Modelle mit Suche und Filtern, darunter sechs Kabinenroller und zwei Seniorenmobile
 - fünf Kabinenroller mit Empfehlung und ehrlichem Hinweis
 - Direktvergleich für bis zu drei Modelle
 - transparente Affiliate-Kennzeichnung und Herstellerquellen
@@ -34,3 +34,13 @@ Zum lokalen Anzeigen genügt ein statischer HTTP-Server im Projektverzeichnis.
 Ein Push auf `main` startet den vorhandenen IONOS-Deploy-Now-Ablauf.
 Zur Veröffentlichung gehört neben dem Orchestration-Lauf auch der separat
 ausgelöste Lauf „Deploy Now: Deploy to IONOS“.
+
+## Persönliche Produktfotos
+
+Die Fotozuordnung stammt von Martin. Varianten der Classico-, Falcon- und
+Vita-Care-Reihen teilen bei Bedarf ein gekennzeichnetes Archivfoto; es ist kein
+Nachweis für die Ausstattung des aktuellen Angebots. Flow Li, Vita Care 4000 und
+Vita Care Neo wurden anhand der offiziellen Futura-Seiten am 12.09.2026 ergänzt.
+Die drei neuen Angebotslinks sind direkte Herstellerlinks ohne Affiliate-Zusatz.
+Das separate Porträt zeigt Martin im Vorstellungsbereich. Neue Aufnahmen können
+über die optionalen `personalPhoto`-Felder in `products.js` ausgetauscht werden.

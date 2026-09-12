@@ -61,7 +61,15 @@ window.PRODUCTS = [
     "image": "https://elektroroller-futura.de/img/p/1/2/9/0/1/12901.jpg",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-chopper-blake?affp=17205#/farbe-light_grey/anzahl_lithium_ionen_akkus-60v_40ah_100km_reichweite",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "personalPhoto": {
+      "src": "assets/produkt-blake-960.webp",
+      "srcset": "assets/produkt-blake-480.webp 480w, assets/produkt-blake-960.webp 960w",
+      "width": 3024,
+      "height": 4032,
+      "alt": "Martin sitzt auf einem schwarzen E-Chopper Blake.",
+      "note": "Archivfoto der Modellreihe. Ausstattung und Akku können abweichen."
+    }
   },
   {
     "id": 3593,
@@ -162,7 +170,15 @@ window.PRODUCTS = [
     "image": null,
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-e-motorrad-mars?affp=17205",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "personalPhoto": {
+      "src": "assets/produkt-mars-960.webp",
+      "srcset": "assets/produkt-mars-480.webp 480w, assets/produkt-mars-960.webp 960w",
+      "width": 1206,
+      "height": 1280,
+      "alt": "Martin sitzt auf dem E-Motorrad Mars mit Windschutzscheibe.",
+      "note": "Archivfoto der Modellreihe. Ausstattung und Akku können abweichen."
+    }
   },
   {
     "id": 3622,
@@ -210,7 +226,15 @@ window.PRODUCTS = [
     "image": "https://elektroroller-futura.de/img/p/2/2/8/6/2286.jpg",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-falcon?affp=17205#/geschwindigkeit_auswahlen-45_km_h/farbe-schwarz/anzahl_lithium_ionen_akkus-1_lithium_akku_80_km_reichweite",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "personalPhoto": {
+      "src": "assets/produkt-falcon-double-960.webp",
+      "srcset": "assets/produkt-falcon-double-480.webp 480w, assets/produkt-falcon-double-960.webp 960w",
+      "width": 5712,
+      "height": 4284,
+      "alt": "Martin mit einem weiß-grünen Falcon Double bei Sonnenuntergang.",
+      "note": "Archivfoto der Modellreihe. Ausstattung und Akku können abweichen."
+    }
   },
   {
     "id": 2912,
@@ -226,7 +250,15 @@ window.PRODUCTS = [
     "image": "https://elektroroller-futura.de/img/p/2/2/8/6/2286.jpg",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-falcon-30ah?affp=17205#/farbe-schwarz/anzahl_lithium_ionen_akkus-1_lithium_akku_100_km_reichweite",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "personalPhoto": {
+      "src": "assets/produkt-falcon-double-960.webp",
+      "srcset": "assets/produkt-falcon-double-480.webp 480w, assets/produkt-falcon-double-960.webp 960w",
+      "width": 5712,
+      "height": 4284,
+      "alt": "Martin mit einem Falcon Double aus der gleichen Modellreihe.",
+      "note": "Archivfoto der Modellreihe. Ausstattung und Akku können abweichen."
+    }
   },
   {
     "id": 3399,
@@ -370,7 +402,15 @@ window.PRODUCTS = [
     "image": null,
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-classico-li-highspeed?affp=17205#/farbe-blue",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "personalPhoto": {
+      "src": "assets/produkt-classico-960.webp",
+      "srcset": "assets/produkt-classico-480.webp 480w, assets/produkt-classico-960.webp 960w",
+      "width": 960,
+      "height": 1280,
+      "alt": "Martin auf einem Classico aus der gleichen Modellreihe.",
+      "note": "Archivfoto der Modellreihe. Ausstattung und Akku können abweichen."
+    }
   },
   {
     "id": 10,
@@ -386,7 +426,15 @@ window.PRODUCTS = [
     "image": "https://elektroroller-futura.de/img/p/8/6/3/7/8637.jpg",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-classico-li?affp=17205#/geschwindigkeit_auswahlen-45_km_h/farbe-rot/anzahl_lithium_ionen_akkus-1_lithium_ionen_akku_60km_reichweite_000_",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "personalPhoto": {
+      "src": "assets/produkt-classico-960.webp",
+      "srcset": "assets/produkt-classico-480.webp 480w, assets/produkt-classico-960.webp 960w",
+      "width": 960,
+      "height": 1280,
+      "alt": "Martin sitzt auf einem schwarzen Classico mit brauner Sitzbank.",
+      "note": "Archivfoto der Modellreihe. Ausstattung und Akku können abweichen."
+    }
   },
   {
     "id": 367,
@@ -402,7 +450,15 @@ window.PRODUCTS = [
     "image": null,
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-kaufen-falcon-2?affp=17205#/farbe-schwarz",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "personalPhoto": {
+      "src": "assets/produkt-falcon-960.webp",
+      "srcset": "assets/produkt-falcon-480.webp 480w, assets/produkt-falcon-960.webp 960w",
+      "width": 960,
+      "height": 1280,
+      "alt": "Martin sitzt im grauen Mantel auf einem Falcon.",
+      "note": "Archivfoto der Modellreihe. Ausstattung und Akku können abweichen."
+    }
   },
   {
     "id": 20,
@@ -580,7 +636,15 @@ window.PRODUCTS = [
     "image": null,
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/elektroroller-hawk-2?affp=17205#/farbe-mattschwarz/geschwindigkeit_auswahlen-45_km_h/anzahl_lithium_ionen_akkus-1_lithium_ionen_akku_60km_reichweite_000_",
     "isAffiliate": true,
-    "offerLabel": "Angebot"
+    "offerLabel": "Angebot",
+    "personalPhoto": {
+      "src": "assets/produkt-hawk-2-960.webp",
+      "srcset": "assets/produkt-hawk-2-480.webp 480w, assets/produkt-hawk-2-960.webp 960w",
+      "width": 960,
+      "height": 1280,
+      "alt": "Martin sitzt lächelnd auf einem schwarzen HAWK 2.0.",
+      "note": "Archivfoto der Modellreihe. Ausstattung und Akku können abweichen."
+    }
   },
   {
     "id": 667,
@@ -681,5 +745,83 @@ window.PRODUCTS = [
     "verifiedAt": "September 2026",
     "isAffiliate": false,
     "offerLabel": "Angebot"
+  },
+  {
+    "id": 3163,
+    "slug": "flow-li",
+    "name": "Flow Li",
+    "fullName": "Vierrädriger Kabinenroller Flow Li mit entnehmbarem Lithium-Akku",
+    "category": "Kabinenroller",
+    "price": 7999,
+    "speed": "45 km/h",
+    "range": "bis zu 70 / 140 km",
+    "power": "4.000 W",
+    "battery": "60 V / 60 Ah Lithium, entnehmbar",
+    "image": "https://elektroroller-futura.de/17644-big_default/elektro-kabinenroller-flow.jpg",
+    "affiliateUrl": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/elektro-kabinenroller-flow",
+    "isAffiliate": false,
+    "offerLabel": "Angebot",
+    "sourceUrl": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/elektro-kabinenroller-flow",
+    "verifiedAt": "September 2026",
+    "personalPhoto": {
+      "src": "assets/produkt-flow-960.webp",
+      "srcset": "assets/produkt-flow-480.webp 480w, assets/produkt-flow-960.webp 960w",
+      "width": 4284,
+      "height": 5712,
+      "alt": "Martin und Luca an den geöffneten Türen eines silbernen Flow-Kabinenrollers.",
+      "note": "Archivfoto der Modellreihe. Die aktuelle Ausstattung kann abweichen."
+    }
+  },
+  {
+    "id": 325,
+    "slug": "vita-care-4000",
+    "name": "Vita Care 4000",
+    "fullName": "Vierrädriges Seniorenmobil Vita Care 4000, 25 km/h",
+    "category": "Seniorenmobile",
+    "price": 1799,
+    "speed": "25 km/h",
+    "range": "bis zu 50 km",
+    "power": "1.000 W",
+    "battery": "60 V / 20 Ah Blei-Gel, fest verbaut",
+    "image": "https://elektroroller-futura.de/5808-big_default/vita-care-4000.jpg",
+    "affiliateUrl": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/vita-care-4000",
+    "isAffiliate": false,
+    "offerLabel": "Angebot",
+    "sourceUrl": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/vita-care-4000",
+    "verifiedAt": "September 2026",
+    "personalPhoto": {
+      "src": "assets/produkt-vitacare-960.webp",
+      "srcset": "assets/produkt-vitacare-480.webp 480w, assets/produkt-vitacare-960.webp 960w",
+      "width": 5712,
+      "height": 4284,
+      "alt": "Martin sitzt auf einem VitaCare 4000 bei einem Fototermin auf einem Feldweg.",
+      "note": "Archivfoto der Modellreihe. Die aktuelle Ausstattung kann abweichen."
+    }
+  },
+  {
+    "id": 3377,
+    "slug": "vita-care-neo",
+    "name": "VitaCare Neo",
+    "fullName": "Seniorenmobil Vita Care Neo mit Lithium-Akku, 45 km/h",
+    "category": "Seniorenmobile",
+    "price": 3299,
+    "speed": "45 km/h",
+    "range": "bis zu 50 / 75 / 100 km",
+    "power": "max. 3.000 W",
+    "battery": "60 V / 20, 30 oder 40 Ah Lithium, entnehmbar",
+    "image": "https://elektroroller-futura.de/18693-big_default/vita-care-neo.jpg",
+    "affiliateUrl": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/vita-care-neo",
+    "isAffiliate": false,
+    "offerLabel": "Angebot",
+    "sourceUrl": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/vita-care-neo",
+    "verifiedAt": "September 2026",
+    "personalPhoto": {
+      "src": "assets/produkt-vitacare-960.webp",
+      "srcset": "assets/produkt-vitacare-480.webp 480w, assets/produkt-vitacare-960.webp 960w",
+      "width": 5712,
+      "height": 4284,
+      "alt": "Martin sitzt auf einem VitaCare 4000 bei einem Fototermin auf einem Feldweg.",
+      "note": "Archivfoto des Vita Care 4000. Der aktuelle Neo ist eine andere Variante mit 45 km/h."
+    }
   }
 ];

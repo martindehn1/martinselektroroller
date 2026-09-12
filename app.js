@@ -5,6 +5,7 @@
   const products = window.PRODUCTS;
   const categoryOrder = [
     "Kabinenroller",
+    "Seniorenmobile",
     "E-Roller",
     "E-Chopper",
     "Highspeed & 125er",
@@ -14,6 +15,7 @@
   ];
   const categoryDescriptions = {
     Kabinenroller: "Wettergeschützt, kompakt und mit ganz eigenen Anforderungen",
+    Seniorenmobile: "Bequemer Einstieg und Mobilität für den Alltag",
     "E-Chopper": "Entspannt sitzen, markant auftreten",
     "E-Roller": "Für Stadt, Pendeln und Alltag",
     "Highspeed & 125er": "Für schnellere und längere Strecken",
@@ -23,6 +25,7 @@
   };
   const accents = {
     Kabinenroller: "accent-cabin",
+    Seniorenmobile: "accent-blue",
     "E-Chopper": "accent-lime",
     "E-Roller": "accent-blue",
     "Highspeed & 125er": "accent-orange",
@@ -94,7 +97,12 @@
       .filter(Boolean)
       .map((spec) => `<span>${escapeHtml(spec)}</span>`)
       .join("");
-    const visual = product.image
+    const visual = product.personalPhoto
+      ? `<figure class="product-photo-print">
+          <img alt="${escapeHtml(product.personalPhoto.alt)}" loading="lazy" decoding="async" src="${escapeHtml(product.personalPhoto.src)}" srcset="${escapeHtml(product.personalPhoto.srcset)}" sizes="(max-width: 540px) 80vw, 260px" width="${Number(product.personalPhoto.width)}" height="${Number(product.personalPhoto.height)}">
+          <figcaption>Mit Martin vor Ort</figcaption>
+        </figure>`
+      : product.image
       ? `<img alt="${escapeHtml(product.name)} Elektroroller" loading="lazy" src="${escapeHtml(product.image)}">`
       : `<div class="product-monogram" aria-hidden="true">${escapeHtml(initials(product.name))}</div>`;
     const recommendation = product.recommendation
@@ -106,7 +114,7 @@
 
     return `
       <article class="product-card" id="modell-${escapeHtml(product.slug)}">
-        <div class="product-visual ${accents[product.category] || "accent-sand"}">
+        <div class="product-visual ${accents[product.category] || "accent-sand"}${product.personalPhoto ? " product-visual-personal" : ""}">
           <div class="product-badges">
             <span>${
               product.category === "Kabinenroller"
@@ -123,6 +131,7 @@
           <p class="product-category">${escapeHtml(product.category)}</p>
           <h3>${escapeHtml(product.name)}</h3>
           <p class="product-fullname">${escapeHtml(product.fullName)}</p>
+          ${product.personalPhoto ? `<p class="product-photo-note">${escapeHtml(product.personalPhoto.note)}</p>` : ""}
           ${recommendation}
           <div class="quick-specs">${specs}</div>
           <div class="product-footer">
