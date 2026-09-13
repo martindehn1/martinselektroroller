@@ -34,9 +34,9 @@
     "E-Scooter": "accent-mint",
   };
 
-  let activeCategory = "Alle";
+  let activeCategory = root.dataset?.category || "Alle";
   let query = "";
-  let showAll = false;
+  let showAll = root.dataset?.showAll === "true";
   let compare = [];
 
   const categories = [
@@ -66,6 +66,10 @@
       currency: "EUR",
       maximumFractionDigits: 0,
     }).format(price);
+  }
+
+  function assetUrl(value) {
+    return String(value || "").replace(/(^|,\s*)assets\//g, "$1/assets/");
   }
 
   function initials(name) {
@@ -98,9 +102,9 @@
       .map((spec) => `<span>${escapeHtml(spec)}</span>`)
       .join("");
     const visual = product.personalPhoto
-      ? `<img class="product-personal-image${product.personalPhoto.framing === "portrait" ? " product-personal-image-tall" : ""}" alt="${escapeHtml(product.personalPhoto.alt)}" loading="lazy" decoding="async" src="${escapeHtml(product.personalPhoto.src)}" srcset="${escapeHtml(product.personalPhoto.srcset)}" sizes="(max-width: 560px) calc(100vw - 32px), (max-width: 620px) calc(100vw - 40px), (max-width: 900px) calc((100vw - 62px) / 2), (max-width: 1100px) calc((100vw - 86px) / 2), 425px" width="${Number(product.personalPhoto.width)}" height="${Number(product.personalPhoto.height)}">`
+      ? `<img class="product-personal-image${product.personalPhoto.framing === "portrait" ? " product-personal-image-tall" : ""}" alt="${escapeHtml(product.personalPhoto.alt)}" loading="lazy" decoding="async" src="${escapeHtml(assetUrl(product.personalPhoto.src))}" srcset="${escapeHtml(assetUrl(product.personalPhoto.srcset))}" sizes="(max-width: 560px) calc(100vw - 32px), (max-width: 620px) calc(100vw - 40px), (max-width: 900px) calc((100vw - 62px) / 2), (max-width: 1100px) calc((100vw - 86px) / 2), 425px" width="${Number(product.personalPhoto.width)}" height="${Number(product.personalPhoto.height)}">`
       : product.image
-      ? `<img alt="${escapeHtml(product.name)} – Herstellerfoto" loading="lazy" decoding="async" src="${escapeHtml(product.image)}"${product.imageWidth && product.imageHeight ? ` width="${Number(product.imageWidth)}" height="${Number(product.imageHeight)}"` : ""}>`
+      ? `<img alt="${escapeHtml(product.name)} – Herstellerfoto" loading="lazy" decoding="async" src="${escapeHtml(assetUrl(product.image))}"${product.imageSrcset ? ` srcset="${escapeHtml(assetUrl(product.imageSrcset))}" sizes="(max-width: 620px) calc(100vw - 72px), 385px"` : ""}${product.imageWidth && product.imageHeight ? ` width="${Number(product.imageWidth)}" height="${Number(product.imageHeight)}"` : ""}>`
       : `<div class="product-monogram" aria-hidden="true">${escapeHtml(initials(product.name))}</div>`;
     const recommendation = product.recommendation
       ? `<p class="product-recommendation">${escapeHtml(product.recommendation)}</p>`
@@ -126,7 +130,7 @@
         </div>
         <div class="product-body">
           <p class="product-category">${escapeHtml(product.category)}</p>
-          <h3>${escapeHtml(product.name)}</h3>
+          <h3>${product.detailUrl ? `<a class="model-detail-link" href="${escapeHtml(product.detailUrl)}">${escapeHtml(product.name)} <span aria-hidden="true">→</span></a>` : escapeHtml(product.name)}</h3>
           <p class="product-fullname">${escapeHtml(product.fullName)}</p>
           ${product.personalPhoto ? `<p class="product-photo-note">${escapeHtml(product.personalPhoto.note)}</p>` : ""}
           ${!product.personalPhoto && product.imageNote ? `<p class="product-photo-note">${escapeHtml(product.imageNote)}</p>` : ""}

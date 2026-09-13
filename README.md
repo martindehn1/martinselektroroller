@@ -35,6 +35,35 @@ Ein Push auf `main` startet den vorhandenen IONOS-Deploy-Now-Ablauf.
 Zur Veröffentlichung gehört neben dem Orchestration-Lauf auch der separat
 ausgelöste Lauf „Deploy Now: Deploy to IONOS“.
 
+## Suchmaschinen und Inhaltsseiten
+
+Seit 13.09.2026 gibt es zehn zusätzliche statische Seiten: eine vollständige
+Modellübersicht, drei Kategorien, drei ausführliche Modellchecks (Flow, Neo,
+Falcon), das Autorenprofil, die Vergleichsmethode und die Probefahrt-Checkliste.
+Alle 43 Modelle sind unter `/modelle/` im initialen HTML verfügbar. Die Startseite
+behält ihre priorisierte Auswahl. Modell- und Kategorieverweise sind normale
+HTML-Links; die alten Modell-Anker funktionieren weiterhin.
+
+Nach Änderungen an `products.js`, `app.js` oder den redaktionellen Texten:
+
+```sh
+node scripts/build-seo.mjs
+node scripts/check-seo.mjs
+```
+
+Die generierten HTML-Dateien werden mit veröffentlicht; IONOS benötigt weiterhin
+keine Laufzeit-Abhängigkeiten. Das Änderungsdatum im Generator nur bei echten
+Inhaltsänderungen aktualisieren. Der Generator erstellt Canonicals, individuelle
+Metadaten, Breadcrumbs, Autoren-/Artikel-/Listen-Auszeichnungen und die Sitemap.
+Flow und Neo enthalten Product/Offer-Daten ohne erfundene Bewertungen. Preise
+müssen mit der konkret beschriebenen Variante übereinstimmen.
+
+Das Google-Verifizierungs-Tag in `index.html` bleibt dauerhaft erhalten. Die
+Sitemap liegt unter `https://rollerkompass.de/sitemap.xml`. `.htaccess` aktiviert
+unterstützte Textkompression und Caching; HTML wird bei erneutem Abruf validiert.
+Impressum und Datenschutz enthalten weiterhin einen vorhandenen Platzhalter;
+vollständige Betreiberangaben müssen vor einer inhaltlichen Ergänzung vorliegen.
+
 ## Persönliche Produktfotos
 
 Die Fotozuordnung stammt von Martin. Varianten der Classico-, Falcon- und
@@ -42,6 +71,8 @@ Vita-Care-Reihen teilen bei Bedarf ein gekennzeichnetes Archivfoto; es ist kein
 Nachweis für die Ausstattung des aktuellen Angebots. Flow Li, Vita Care 4000 und
 Vita Care Neo wurden anhand der offiziellen Futura-Seiten am 12.09.2026 ergänzt.
 Die drei neuen Angebotslinks sind direkte Herstellerlinks ohne Affiliate-Zusatz.
+Für den Neo wird seit dem SEO-Abgleich das tatsächliche Herstellerfoto verwendet;
+Martins VitaCare-Archivfoto bleibt dem Vita Care 4000 zugeordnet.
 Das separate Porträt zeigt Martin im Vorstellungsbereich. Neue Aufnahmen können
 über die optionalen `personalPhoto`-Felder in `products.js` ausgetauscht werden.
 

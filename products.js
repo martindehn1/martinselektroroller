@@ -15,7 +15,7 @@ window.PRODUCTS = [
     "isAffiliate": false,
     "offerLabel": "Angebot",
     "sourceUrl": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/elektro-kabinenroller-flow",
-    "verifiedAt": "September 2026",
+    "verifiedAt": "13.09.2026",
     "personalPhoto": {
       "src": "assets/produkt-flow-960.webp",
       "srcset": "assets/produkt-flow-480.webp 480w, assets/produkt-flow-960.webp 960w",
@@ -23,7 +23,8 @@ window.PRODUCTS = [
       "height": 5712,
       "alt": "Martin und Luca an den geöffneten Türen eines silbernen Flow-Kabinenrollers.",
       "note": "Archivfoto der Modellreihe. Die aktuelle Ausstattung kann abweichen."
-    }
+    },
+    "detailUrl": "/kabinenroller/flow-li/"
   },
   {
     "id": 3377,
@@ -31,25 +32,23 @@ window.PRODUCTS = [
     "name": "VitaCare Neo",
     "fullName": "Seniorenmobil Vita Care Neo mit Lithium-Akku, 45 km/h",
     "category": "Seniorenmobile",
-    "price": 3299,
+    "price": 2499,
     "speed": "45 km/h",
     "range": "bis zu 50 / 75 / 100 km",
     "power": "max. 3.000 W",
     "battery": "60 V / 20, 30 oder 40 Ah Lithium, entnehmbar",
-    "image": "https://elektroroller-futura.de/18693-big_default/vita-care-neo.jpg",
+    "image": "assets/futura-vitacare-neo-960.webp",
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/vita-care-neo",
     "isAffiliate": false,
     "offerLabel": "Angebot",
     "sourceUrl": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/vita-care-neo",
-    "verifiedAt": "September 2026",
-    "personalPhoto": {
-      "src": "assets/produkt-vitacare-960.webp",
-      "srcset": "assets/produkt-vitacare-480.webp 480w, assets/produkt-vitacare-960.webp 960w",
-      "width": 5712,
-      "height": 4284,
-      "alt": "Martin sitzt auf einem VitaCare 4000 bei einem Fototermin auf einem Feldweg.",
-      "note": "Archivfoto des Vita Care 4000. Der aktuelle Neo ist eine andere Variante mit 45 km/h."
-    }
+    "verifiedAt": "13.09.2026",
+    "detailUrl": "/seniorenmobile/vita-care-neo/",
+    "imageWidth": 960,
+    "imageHeight": 1097,
+    "imageSourceUrl": "https://elektroroller-futura.de/18693-big_default/vita-care-neo.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/vita-care-neo",
+    "imageSrcset": "assets/futura-vitacare-neo-480.webp 480w, assets/futura-vitacare-neo-960.webp 960w"
   },
   {
     "id": 367,
@@ -58,10 +57,10 @@ window.PRODUCTS = [
     "fullName": "Elektroroller Falcon mit Blei-Gel-Akku",
     "category": "E-Roller",
     "price": 1599,
-    "speed": null,
-    "range": null,
-    "power": "3.400 W",
-    "battery": "Blei-Gel",
+    "speed": "45 km/h",
+    "range": "bis zu 60 km (ECO) / 50 km (Speed)",
+    "power": "2.400 W konstant / max. 3.400 W",
+    "battery": "72 V / 20 Ah Blei-Gel, fest verbaut",
     "image": null,
     "affiliateUrl": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-kaufen-falcon-2?affp=17205#/farbe-schwarz",
     "isAffiliate": true,
@@ -73,7 +72,10 @@ window.PRODUCTS = [
       "height": 1280,
       "alt": "Martin sitzt im grauen Mantel auf einem Falcon.",
       "note": "Archivfoto der Modellreihe. Ausstattung und Akku können abweichen."
-    }
+    },
+    "detailUrl": "/e-roller/falcon/",
+    "sourceUrl": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-kaufen-falcon-2",
+    "verifiedAt": "13.09.2026"
   },
   {
     "id": 325,
@@ -107,9 +109,9 @@ window.PRODUCTS = [
     "name": "Falcon Double",
     "fullName": "E-Roller Falcon Double mit Lithium-Akku",
     "category": "E-Roller",
-    "price": 2399,
+    "price": 1999,
     "speed": "25 / 45 km/h",
-    "range": "bis zu 80 km je Akku",
+    "range": "bis zu 80 km (ECO) / 60 km (Speed) je Akku",
     "power": "bis zu 3.400 W",
     "battery": "72 V / 20 Ah Lithium",
     "image": "https://elektroroller-futura.de/img/p/2/2/8/6/2286.jpg",
@@ -123,7 +125,10 @@ window.PRODUCTS = [
       "height": 4284,
       "alt": "Martin mit einem weiß-grünen Falcon Double bei Sonnenuntergang.",
       "note": "Archivfoto der Modellreihe. Ausstattung und Akku können abweichen."
-    }
+    },
+    "detailUrl": "/e-roller/falcon/",
+    "sourceUrl": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-falcon",
+    "verifiedAt": "13.09.2026"
   },
   {
     "id": 4102,
