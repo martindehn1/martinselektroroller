@@ -7,6 +7,9 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const origin = 'https://rollerkompass.de';
 const updated = '2026-09-13';
+// ProfilePage requires DateTime. Preserve the last editorial commit's timestamp;
+// change this only when the profile content changes, never on every build.
+const profileUpdated = '2026-09-13T14:26:11+02:00';
 const version = 'seo-20260913';
 const read = name => fs.readFileSync(path.join(root, name), 'utf8');
 const ctx = { window: {} };
@@ -90,7 +93,10 @@ function schema(page) {
   const crumb=crumbs(page);
   const entity={'@type':page.type,'@id':origin+page.url+'#page',url:origin+page.url,name:page.heading,description:page.description,inLanguage:'de-DE',isPartOf:{'@id':website['@id']},dateModified:updated,breadcrumb:crumb.data};
   if(page.type==='Article') Object.assign(entity,{headline:page.heading,author:{'@id':author['@id']},publisher:{'@id':organization['@id']},mainEntityOfPage:origin+page.url,image:[origin+'/og.png']});
-  if(page.type==='ProfilePage') entity.mainEntity={'@id':author['@id']};
+  if(page.type==='ProfilePage') {
+    entity.mainEntity={'@id':author['@id']};
+    entity.dateModified=profileUpdated;
+  }
   if(page.collection) entity.mainEntity={'@type':'ItemList',numberOfItems:page.collection.length,itemListElement:page.collection.map((p,i)=>({'@type':'ListItem',position:i+1,name:p.name,url:origin+(p.detailUrl||'/modelle/#modell-'+p.slug)}))};
   const graph=[website,organization,author,entity];
   if(page.product) {
