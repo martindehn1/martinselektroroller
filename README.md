@@ -130,3 +130,7 @@ Distanz und eigene Reichweitenmessung sind nicht dokumentiert. Es gibt kein
 Statistik: https://rollerkompass-klickstatistik.martin-dehn1.chatgpt.site (nur Martins angemeldetes Konto). Keine Cookies, Browser-Speicherung, Besucherkennung oder Übermittlung von URL-Suchparametern/Referrer; aggregierte Tageszähler. Einwilligungs-/Datenschutzhinweise beziehen sich nur auf diese eigene Messung, nicht auf Futuras Shop. Bei neuen Modellen/Seiten müssen `MODELS`/`PATHS` im Zähler und der Katalog des Messdienstes mit aktualisiert werden.
 
 Testaufrufe mit `?rk_test=1` werden separat gezählt und bleiben aus den normalen Berichten ausgeschlossen. `?rk_tracking=off` schaltet die Messung für den Seitenaufruf aus. Lokale Hosts zählen standardmäßig nicht. Die eigene Messung stellt keine Verkaufszuordnung her.
+
+## Seitenaufrufe (15.09.2026)
+
+Die Messung zählt zusätzlich Seitenaufrufe aller 11 Inhaltsseiten, getrennt von Futura-Klicks. Nur Seitenpfad, Tag und Summe werden gespeichert. Keine Wiedererkennung: erster sichtbarer Aufruf, Reload und BFCache-Rückkehr zählen; Tab-/Hashwechsel zählen nicht zusätzlich. Prerender und Hintergrundtabs zählen erst beim Anzeigen. Test-/Opt-out-Parameter gelten für beide Messarten. Beide Dashboard-Berichte aktualisieren sich sichtbar alle 15 Sekunden. Bei neuen Seiten den erlaubten Pfadkatalog mitführen.

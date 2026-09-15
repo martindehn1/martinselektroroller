@@ -59,4 +59,21 @@
   }
   document.addEventListener("click", track);
   document.addEventListener("auxclick", track);
+
+ // Count visible document visits, including back/forward cache restores.
+ // Visibility changes alone and in-page hash navigation never add a visit.
+ var pageviewSent=false;
+ function pageview(){
+  if(pageviewSent||document.prerendering||document.visibilityState!=="visible")return;
+  pageviewSent=true;
+  var payload={path:page};if(testing)payload.test=true;
+  try{fetch('https://rollerkompass-klickstatistik.martin-dehn1.chatgpt.site/api/pageviews/collect',{
+   method:'POST',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify(payload),
+   credentials:'omit',referrerPolicy:'no-referrer',mode:'cors',cache:'no-store',keepalive:true
+  }).catch(function(){});}catch(_){}
+ }
+ document.addEventListener('visibilitychange',pageview);
+ document.addEventListener('prerenderingchange',pageview);
+ window.addEventListener('pageshow',function(event){if(event.persisted){pageviewSent=false;pageview();}});
+ pageview();
 })();
