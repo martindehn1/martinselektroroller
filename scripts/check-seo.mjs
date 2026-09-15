@@ -36,7 +36,22 @@ for(const [url,html] of pages) {
       assert.equal(offer.hasMerchantReturnPolicy.merchantReturnDays,14);
       assert.equal(offer.hasMerchantReturnPolicy.returnShippingFeesAmount.value,100);
       for (const value of ['99 €','100 €','14 Tagen','15.09.2026',offer.shippingDetails.shippingSettingsLink,offer.hasMerchantReturnPolicy.merchantReturnLink]) assert(html.includes(value),url+' visible offer evidence: '+value);
-      assert(!entity.review && !entity.aggregateRating,url+' no unsupported reviews');
+      assert(!entity.aggregateRating,url+' no fabricated aggregate');
+      if (url===origin+'/seniorenmobile/vita-care-neo/') {
+        const review=entity.review;
+        assert.equal(review['@type'],'Review');
+        assert.equal(review.author.name,'Martin Dehn');
+        assert.equal(review.reviewRating.ratingValue,5);
+        assert.equal(review.reviewRating.bestRating,5);
+        assert.equal(review.reviewRating.worstRating,1);
+        assert.equal(review.datePublished,'2026-09-15');
+        assert(html.includes('5 von 5 Sternen'));
+        assert(html.includes('Martin arbeitet mit Elektroroller Futura zusammen.'));
+        // Every structured review sentence must also be in the visible article.
+        const visible=html.replace(/<script[\s\S]*?<\/script>/g,'').replace(/<[^>]+>/g,' ');
+        for(const sentence of review.reviewBody.split(/(?<=\.) /)) assert(visible.includes(sentence),url+' review text visible');
+        assert(!html.includes('Ein eigener Fahr- oder Reichweitentest des Neo wird damit nicht behauptet.'));
+      } else assert(!entity.review,url+' no unsupported reviews');
     }
 
   }

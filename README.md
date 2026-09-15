@@ -108,7 +108,17 @@ Versand- und Widerrufsangaben für Deutschland. Dieselben Angaben stehen mit
 Prüfdatum und Quellen sichtbar auf den Modellseiten. Sie gehören zu Futuras
 externem Angebot. Rollerkompass ist kein Händler mit eigenem Checkout und daher
 nicht für Googles Händlereinträge berechtigt; gültige Product/Offer-Daten bleiben
-für Produkt-Snippets erhalten. Fehlende `review` und `aggregateRating` sind
-optionale Google-Hinweise. Keine erfundenen Sterne und keine übernommenen
-Händlerbewertungen ergänzen. `offerDelivery` und `verifiedOffer` im Generator bei
+für Produkt-Snippets erhalten. Fehlende Bewertungen sind optionale Google-Hinweise.
+Keine erfundenen Sterne und keine übernommenen Händlerbewertungen ergänzen. `offerDelivery` und `verifiedOffer` im Generator bei
 neuen Angeboten zuerst mit den verlinkten Herstellerquellen abgleichen.
+
+## Martins persönliche Neo-Rezension (15.09.2026)
+
+Martin hat seine eigene Fahrt mit dem Neo beschrieben und ausdrücklich 5 von 5
+Sternen vergeben. Die sichtbare Rezension und das verschachtelte `Product.review`
+verwenden dieselbe Textquelle `neoReview` im Generator. Die Zusammenarbeit mit
+Futura ist unmittelbar daneben offengelegt. Sein persönliches Superlativ-Fazit
+ist kein Marktvergleich; die erwähnte Feldfahrt ist keine Offroad-Empfehlung.
+Veröffentlichungsdatum und Fahrdatum werden nicht gleichgesetzt. Akkuvariante,
+Distanz und eigene Reichweitenmessung sind nicht dokumentiert. Es gibt kein
+`aggregateRating`, keine erfundene Kundenanzahl und keine Flow-Rezension.
