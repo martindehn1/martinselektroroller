@@ -122,3 +122,11 @@ ist kein Marktvergleich; die erwähnte Feldfahrt ist keine Offroad-Empfehlung.
 Veröffentlichungsdatum und Fahrdatum werden nicht gleichgesetzt. Akkuvariante,
 Distanz und eigene Reichweitenmessung sind nicht dokumentiert. Es gibt kein
 `aggregateRating`, keine erfundene Kundenanzahl und keine Flow-Rezension.
+
+## Eigene Klickmessung (15.09.2026)
+
+`click-tracking.js` zählt Klicks auf Futura-Produktlinks getrennt nach Angebot/Quelle und sendet nur Modell, erlaubten Seitenpfad und Linkart an den separaten Messdienst. Partnerlinks bleiben unverändert. Event-Delegation deckt dynamische Karten, Tastaturaktivierung und Mittelklicks ab; Rechtsklick, Downloads, synthetische und verhinderte Klicks werden ignoriert.
+
+Statistik: https://rollerkompass-klickstatistik.martin-dehn1.chatgpt.site (nur Martins angemeldetes Konto). Keine Cookies, Browser-Speicherung, Besucherkennung oder Übermittlung von URL-Suchparametern/Referrer; aggregierte Tageszähler. Einwilligungs-/Datenschutzhinweise beziehen sich nur auf diese eigene Messung, nicht auf Futuras Shop. Bei neuen Modellen/Seiten müssen `MODELS`/`PATHS` im Zähler und der Katalog des Messdienstes mit aktualisiert werden.
+
+Testaufrufe mit `?rk_test=1` werden separat gezählt und bleiben aus den normalen Berichten ausgeschlossen. `?rk_tracking=off` schaltet die Messung für den Seitenaufruf aus. Lokale Hosts zählen standardmäßig nicht. Die eigene Messung stellt keine Verkaufszuordnung her.

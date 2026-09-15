@@ -110,7 +110,7 @@
       ? `<p class="product-recommendation">${escapeHtml(product.recommendation)}</p>`
       : "";
     const sourceLink = product.sourceUrl
-      ? `<a class="round-action" href="${escapeHtml(product.sourceUrl)}" target="_blank" rel="noopener noreferrer">Quelle ↗</a>`
+      ? `<a data-rk-model="${escapeHtml(product.slug)}" data-rk-kind="source" class="round-action" href="${escapeHtml(product.sourceUrl)}" target="_blank" rel="noopener noreferrer">Quelle ↗</a>`
       : "";
 
     return `
@@ -143,7 +143,7 @@
             </div>
             <div class="product-actions">
               ${sourceLink}
-              <a class="round-action round-action-dark" href="${escapeHtml(product.affiliateUrl)}" target="_blank" rel="${offerRel}" aria-label="${escapeHtml(offerLabel)} für ${escapeHtml(product.name)} bei Futura ansehen${product.isAffiliate ? ' (Affiliate-Link)' : ''}">${escapeHtml(offerLabel)} ↗</a>
+              <a data-rk-model="${escapeHtml(product.slug)}" data-rk-kind="offer" class="round-action round-action-dark" href="${escapeHtml(product.affiliateUrl)}" target="_blank" rel="${offerRel}" aria-label="${escapeHtml(offerLabel)} für ${escapeHtml(product.name)} bei Futura ansehen${product.isAffiliate ? ' (Affiliate-Link)' : ''}">${escapeHtml(offerLabel)} ↗</a>
             </div>
           </div>
           ${product.isAffiliate ? '<p class="product-affiliate">Werbung · Affiliate-Link zum Anbieter</p>' : ''}
@@ -170,7 +170,7 @@
               <div><dt>Reichweite</dt><dd>${escapeHtml(product.range || "Auf Angebotsseite prüfen")}</dd></div>
               <div><dt>Akku</dt><dd>${escapeHtml(product.battery || "Auf Angebotsseite prüfen")}</dd></div>
             </dl>
-            <a href="${escapeHtml(product.sourceUrl || product.affiliateUrl)}" target="_blank" rel="${product.sourceUrl || !product.isAffiliate ? "noopener noreferrer" : "sponsored nofollow noopener noreferrer"}">${product.sourceUrl ? "Quelle öffnen" : `${escapeHtml(product.offerLabel || "Angebot")} öffnen`} →</a>
+            <a data-rk-model="${escapeHtml(product.slug)}" data-rk-kind="${product.sourceUrl ? "source" : "offer"}" href="${escapeHtml(product.sourceUrl || product.affiliateUrl)}" target="_blank" rel="${product.sourceUrl || !product.isAffiliate ? "noopener noreferrer" : "sponsored nofollow noopener noreferrer"}">${product.sourceUrl ? "Quelle öffnen" : `${escapeHtml(product.offerLabel || "Angebot")} öffnen`} →</a>
           </article>`,
       )
       .join("");
