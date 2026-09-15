@@ -486,3 +486,6 @@ h1, h2, h3, h4, .brand-word { font-family: inherit !important; }
 @media (max-width: 900px) { .page-header .nav-links { display: none; } .page-header .mobile-nav { display: block; } }
 @media (max-width: 800px) { .editorial-hero-grid { grid-template-columns: 1fr; gap: 26px; } .editorial-hero { padding-top: 20px; } .editorial-body { font-size: 17px; } }
 @media (max-width: 560px) { .editorial-facts { grid-template-columns: 1fr; } .page-header .nav { gap: 12px; } .editorial-next { padding: 22px; } }
+
+/* Keep the expanded navigation usable on medium-width screens. */
+@media (min-width:901px) and (max-width:1150px){.nav-links{display:none}.mobile-nav{display:block}.mobile-nav>div{z-index:50}}

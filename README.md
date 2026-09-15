@@ -134,3 +134,12 @@ Testaufrufe mit `?rk_test=1` werden separat gezählt und bleiben aus den normale
 ## Seitenaufrufe (15.09.2026)
 
 Die Messung zählt zusätzlich Seitenaufrufe aller 11 Inhaltsseiten, getrennt von Futura-Klicks. Nur Seitenpfad, Tag und Summe werden gespeichert. Keine Wiedererkennung: erster sichtbarer Aufruf, Reload und BFCache-Rückkehr zählen; Tab-/Hashwechsel zählen nicht zusätzlich. Prerender und Hintergrundtabs zählen erst beim Anzeigen. Test-/Opt-out-Parameter gelten für beide Messarten. Beide Dashboard-Berichte aktualisieren sich sichtbar alle 15 Sekunden. Bei neuen Seiten den erlaubten Pfadkatalog mitführen.
+
+
+## Futura-Einstieg (15.09.2026)
+
+`/elektroroller-futura/` wird durch `scripts/futura-entry.mjs` im vorhandenen SEO-Generator erstellt. Die Seite enthält Martins persönliche Auswahl Flow Li, Dora Li, HL 6.0 Premium Duo und VitaCare Neo, einen Flow-Dora-Vergleich sowie eine statische Tabelle und FAQ. Sinngemäße persönliche Einschätzungen sind entsprechend beschriftet. Es werden keine Verkaufsspitzenplätze oder eigenen Dora-/Duo-Fahrtests behauptet. Neue Herstellerbilder liegen lokal; Quelle für Dora ist die Futura-Produktseite `elektro-kabinenroller-dora`, für Duo `e-scooter-6-premium-duo`. Produktdaten zu Flow, Dora und Duo wurden am 15.09.2026 abgeglichen.
+
+Dora ist auf der neuen Einstiegsseite zusätzlich zur bisherigen 43-Modell-Übersicht enthalten. Der Tracker und der getrennte Statistikdienst erlauben die neue Seite und den neuen Dora-Link. Vorhandene Partnerlinks bleiben unverändert; für Dora, Flow und Neo wird kein Partnerparameter erfunden.
+
+Die Rückruffunktion ist in `scripts/callback-section.mjs`, `callback.js` und `callback-config.json` vorbereitet. Sie bleibt aus, bis Martin die öffentlich zu verwendende Geschäftsanschrift und Kontakt-E-Mail liefert. Bei Aktivierung müssen Frontend-Konfiguration und `CALLBACKS_ENABLED` im geschützten Statistikdienst gemeinsam freigeschaltet sein. Das Formular übermittelt nur Name, Telefonnummer, Modell-/Zeitwahl und die ausdrückliche Rückrufbestätigung. Kontakte stehen ausschließlich unter `/rueckrufe` der Statistik; es gibt keine automatische E-Mail und keine Weitergabe an Futura. Die Anleitung ist eine Beschreibung der Implementierung, keine Zusicherung einer vollständig rechtlich geprüften Datenschutzerklärung.
