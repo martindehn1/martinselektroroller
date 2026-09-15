@@ -25,6 +25,20 @@ for(const [url,html] of pages) {
     const data=JSON.parse(m[1]);
     assert.equal(data['@context'],'https://schema.org');
     assert(!m[1].includes('aggregateRating'),url+' unsupported ratings');
+    for (const entity of data['@graph'] || []) {
+      if (entity['@type']==='ProfilePage') assert(/T.*(?:Z|[+-]\d{2}:\d{2})$/.test(entity.dateModified),url+' profile timestamp');
+      if (entity['@type']!=='Product') continue;
+      const offer=entity.offers;
+      assert.equal(new URL(offer.url).hostname,'elektroroller-futura.de',url+' external seller');
+      assert.equal(offer.availability,'https://schema.org/InStock',url+' verified availability');
+      assert.equal(offer.shippingDetails.shippingDestination.addressCountry,'DE');
+      assert.equal(offer.shippingDetails.shippingRate.value,99);
+      assert.equal(offer.hasMerchantReturnPolicy.merchantReturnDays,14);
+      assert.equal(offer.hasMerchantReturnPolicy.returnShippingFeesAmount.value,100);
+      for (const value of ['99 €','100 €','14 Tagen','15.09.2026',offer.shippingDetails.shippingSettingsLink,offer.hasMerchantReturnPolicy.merchantReturnLink]) assert(html.includes(value),url+' visible offer evidence: '+value);
+      assert(!entity.review && !entity.aggregateRating,url+' no unsupported reviews');
+    }
+
   }
   for(const m of html.matchAll(/\b(?:href|src)="([^"]+)"/g)) {
     const ref=new URL(m[1].replaceAll('&amp;','&'),url);

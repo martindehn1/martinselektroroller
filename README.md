@@ -100,3 +100,15 @@ zu Futura-Nachfrage und Klicks. Die Reihenfolge in `products.js` gilt auch in
 den Kategoriefiltern; das initiale HTML bildet dieselbe Reihenfolge ab.
 Im ausführlichen Kabinenroller-Fokus steht der Flow vor Cruise, LimaQ7,
 FUTURA TWO und E-Move.
+
+## Google-Angebotsdaten (15.09.2026)
+
+Flow Li und VitaCare Neo enthalten verifizierte Futura-Verfügbarkeit sowie
+Versand- und Widerrufsangaben für Deutschland. Dieselben Angaben stehen mit
+Prüfdatum und Quellen sichtbar auf den Modellseiten. Sie gehören zu Futuras
+externem Angebot. Rollerkompass ist kein Händler mit eigenem Checkout und daher
+nicht für Googles Händlereinträge berechtigt; gültige Product/Offer-Daten bleiben
+für Produkt-Snippets erhalten. Fehlende `review` und `aggregateRating` sind
+optionale Google-Hinweise. Keine erfundenen Sterne und keine übernommenen
+Händlerbewertungen ergänzen. `offerDelivery` und `verifiedOffer` im Generator bei
+neuen Angeboten zuerst mit den verlinkten Herstellerquellen abgleichen.
