@@ -176,7 +176,7 @@ if(start<0||end<start) throw new Error('Homepage explorer boundary missing');
 home=home.slice(0,start)+explorer('Alle',false).replace(' data-category="Alle" data-show-all="false"','')+'\n'+home.slice(end+6).trimStart();
 home=home.replace('click-tracking.js?v=pageviews-20260915','click-tracking.js?v=futura-20260915');
 home=home.replace(/(styles\.css|app\.js|products\.js)\?v=[^"\s]+/g,`$1?v=${version}`);
-home=home.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/,`<script type="application/ld+json">${JSON.stringify({'@context':'https://schema.org','@graph':[website,organization,author,{'@type':'WebPage','@id':origin+'/#page',url:origin+'/',name:'Kabinenroller und E-Roller vergleichen',isPartOf:{'@id':website['@id']},dateModified:updated,inLanguage:'de-DE'}]})}</script>`);
+home=home.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/,`<script type="application/ld+json">${JSON.stringify({'@context':'https://schema.org','@graph':[website,organization,author,{'@type':'WebPage','@id':origin+'/#page',url:origin+'/',name:'Kabinenroller und E-Roller vergleichen',primaryImageOfPage:origin+'/assets/martin-luca-hero-blau-1254.webp',isPartOf:{'@id':website['@id']},dateModified:updated,inLanguage:'de-DE'}]})}</script>`);
 fs.writeFileSync(path.join(root,'index.html'),home.split('\n').map(line=>line.trimEnd()).join('\n'));
 const locations=['/',...pages.map(p=>p.url)];
 fs.writeFileSync(path.join(root,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${locations.map(url=>`  <url><loc>${origin+url}</loc><lastmod>${pages.find(p=>p.url===url)?.updated || (pages.find(p=>p.url===url)?.product?offerChecked:updated)}</lastmod></url>`).join('\n')}\n</urlset>\n`);
