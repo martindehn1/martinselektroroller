@@ -33,6 +33,11 @@ for(const [url,html] of pages) {
       assert.equal(offer.availability,'https://schema.org/InStock',url+' verified availability');
       assert.equal(offer.shippingDetails.shippingDestination.addressCountry,'DE');
       assert.equal(offer.shippingDetails.shippingRate.value,99);
+      assert.equal(offer.shippingDetails.deliveryTime['@type'],'ShippingDeliveryTime');
+      assert.equal(offer.shippingDetails.deliveryTime.transitTime['@type'],'QuantitativeValue');
+      assert.equal(offer.shippingDetails.deliveryTime.transitTime.unitCode,'DAY');
+      const expectedDelivery=url.includes('/flow-li/')?[10,15]:[3,7];
+      assert.deepEqual([offer.shippingDetails.deliveryTime.transitTime.minValue,offer.shippingDetails.deliveryTime.transitTime.maxValue],expectedDelivery);
       assert.equal(offer.hasMerchantReturnPolicy.merchantReturnDays,14);
       assert.equal(offer.hasMerchantReturnPolicy.returnShippingFeesAmount.value,100);
       for (const value of ['99 €','100 €','14 Tagen','15.09.2026',offer.shippingDetails.shippingSettingsLink,offer.hasMerchantReturnPolicy.merchantReturnLink]) assert(html.includes(value),url+' visible offer evidence: '+value);

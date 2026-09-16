@@ -20,23 +20,27 @@ const bySlug = slug => products.find(p => p.slug === slug);
 // Verified Futura offers, 15.09.2026. These are the external seller's terms,
 // not a Rollerkompass checkout or return promise. Recheck before updating.
 const offerChecked = '2026-09-15';
-const offerDelivery = {'flow-li':'10–15 Werktage','vita-care-neo':'3–7 Werktage'};
+const offerDelivery = {
+  'flow-li': {label:'10–15 Werktage',minDays:10,maxDays:15},
+  'vita-care-neo': {label:'3–7 Werktage',minDays:3,maxDays:7}
+};
 const shippingSource = 'https://elektroroller-futura.de/info/versandkosten';
 const returnSource = 'https://elektroroller-futura.de/info/widerrufsbelehrung';
 function verifiedOffer(p) {
-  if (!offerDelivery[p.slug]) throw new Error('Verify offer terms before adding Product markup: '+p.slug);
+  const delivery=offerDelivery[p.slug];
+  if (!delivery) throw new Error('Verify offer terms before adding Product markup: '+p.slug);
   return {
     '@type':'Offer', url:p.sourceUrl, price:p.price, priceCurrency:'EUR',
     seller:{'@type':'Organization',name:'Elektroroller Futura',url:'https://elektroroller-futura.de/'},
     availability:'https://schema.org/InStock', itemCondition:'https://schema.org/NewCondition',
-    shippingDetails:{'@type':'OfferShippingDetails',shippingDestination:{'@type':'DefinedRegion',addressCountry:'DE'},shippingRate:{'@type':'MonetaryAmount',value:99,currency:'EUR'},shippingSettingsLink:shippingSource},
+    shippingDetails:{'@type':'OfferShippingDetails',shippingDestination:{'@type':'DefinedRegion',addressCountry:'DE'},shippingRate:{'@type':'MonetaryAmount',value:99,currency:'EUR'},deliveryTime:{'@type':'ShippingDeliveryTime',transitTime:{'@type':'QuantitativeValue',minValue:delivery.minDays,maxValue:delivery.maxDays,unitCode:'DAY'}},shippingSettingsLink:shippingSource},
     hasMerchantReturnPolicy:{'@type':'MerchantReturnPolicy',applicableCountry:'DE',returnPolicyCountry:'DE',returnPolicyCategory:'https://schema.org/MerchantReturnFiniteReturnWindow',merchantReturnDays:14,returnMethod:'https://schema.org/ReturnByMail',returnFees:'https://schema.org/ReturnShippingFees',returnShippingFeesAmount:{'@type':'MonetaryAmount',value:100,currency:'EUR'},merchantReturnLink:returnSource}
   };
 }
 function offerTerms(p) {
   if (!offerDelivery[p.slug]) return '';
   return block('Verfügbarkeit, Versand und Rückgabe bei Futura',
-    para(`Stand 15.09.2026: Futura führt das verlinkte Angebot als lieferbar. Angegebene Lieferzeit: ${offerDelivery[p.slug]}. Verfügbarkeit und Lieferzeit können je nach gewählter Variante wechseln.`)+
+    para(`Stand 15.09.2026: Futura führt das verlinkte Angebot als lieferbar. Angegebene Lieferzeit: ${offerDelivery[p.slug].label}. Verfügbarkeit und Lieferzeit können je nach gewählter Variante wechseln.`)+
     para(`Für Speditionslieferungen innerhalb Deutschlands nennt Futura 99 € Versand pro Bestellung und Lieferanschrift. Abholung nach Terminvereinbarung ist versandkostenfrei. ${source(shippingSource,'Futura-Versandkosten')}.`)+
     para(`Laut Futuras Widerrufsbelehrung gilt für Verbraucher eine Widerrufsfrist von 14 Tagen ab Erhalt. Futura nennt 100 € Rücksendekosten innerhalb Deutschlands und verlangt die ursprüngliche Transportverpackung. ${source(returnSource,'Vollständige Widerrufsbelehrung bei Futura')}.`)+
     para('Kauf, Lieferung und Rückabwicklung erfolgen beim Anbieter. Rollerkompass bietet Orientierung und verkauft die Fahrzeuge nicht selbst. Maßgeblich sind die Angaben zur ausgewählten Variante und die Bedingungen bei der Bestellung.'));
