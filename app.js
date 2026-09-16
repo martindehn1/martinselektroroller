@@ -232,7 +232,7 @@
   }
 
   root.addEventListener("click", (event) => {
-    const categoryButton = event.target.closest("[data-category]");
+    const categoryButton = event.target.closest("button[data-category]");
     if (categoryButton) {
       activeCategory = categoryButton.dataset.category;
       showAll = false;
