@@ -11,7 +11,7 @@ const updated = '2026-09-13';
 // ProfilePage requires DateTime. Preserve the last editorial commit's timestamp;
 // change this only when the profile content changes, never on every build.
 const profileUpdated = '2026-09-13T14:26:11+02:00';
-const version = 'futura-20260915';
+const version = 'ui-20260916';
 const read = name => fs.readFileSync(path.join(root, name), 'utf8');
 const ctx = { window: {} };
 vm.runInNewContext(read('products.js'), ctx);
