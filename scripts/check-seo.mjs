@@ -7,7 +7,7 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const origin='https://rollerkompass.de';
 const urls=[...read('sitemap.xml').matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1]);
-assert.equal(urls.length,12);
+assert.equal(urls.length,13);
 assert.equal(new Set(urls).size,urls.length);
 const pages=new Map(urls.map(u=>[u,read(new URL(u).pathname.replace(/^\//,'')+'index.html')]));
 const titles=new Set();
@@ -92,3 +92,4 @@ assert.equal(products.find(p=>p.slug==='vita-care-neo').price,2499);
 assert.equal(products.find(p=>p.slug==='falcon-double').price,1999);
 assert(read('seniorenmobile/vita-care-neo/index.html').includes('/assets/futura-vitacare-neo-960.webp'));
 console.log(`PASS: ${urls.length} canonical pages, unique metadata, valid JSON-LD, ${links} local references, static/client catalogues, search and source updates.`);
+
