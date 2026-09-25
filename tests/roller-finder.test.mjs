@@ -13,6 +13,8 @@ vm.runInNewContext(script,context);
 const finder = context.window.RKFinder;
 assert.equal(context.window.PRODUCTS.length,43);
 assert.equal(finder.conservativeRange(context.window.PRODUCTS.find(p=>p.slug==='falcon-blei')),50);
+assert.ok(context.window.PRODUCTS.every(p=>finder.localThumb(p)?.src.startsWith('/assets/')));
+assert.equal(finder.localThumb(context.window.PRODUCTS.find(p=>p.slug==='flow-li')).archive,true);
 
 const cabin = finder.candidatesFor({type:'Kabinenroller',speed:45,distance:25,charge:'removable',budget:7000});
 assert.ok(cabin.length>0);
