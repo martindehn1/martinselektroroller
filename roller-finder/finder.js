@@ -41,6 +41,11 @@
   };
   const removable = product => /entnehmbar/i.test(product.battery || '') || ['falcon-double','falcon-double-max-range'].includes(product.slug);
   const modelUrl = product => product.detailUrl || `/modelle/#modell-${encodeURIComponent(product.slug)}`;
+  const localThumb = product => {
+    if (product.image && !/^https?:/i.test(product.image)) return {src:'/'+product.image.replace(/^\//,''),archive:!!product.imageNote};
+    if (product.personalPhoto?.src) return {src:'/'+product.personalPhoto.src.replace(/^\//,''),archive:true};
+    return null;
+  };
 
   function candidatesFor(a) {
     const allowed = ['Kabinenroller','Seniorenmobile','E-Roller','E-Chopper','Highspeed & 125er'];
@@ -92,6 +97,7 @@ root.innerHTML = `<div class="finder-results-head"><p class="eyebrow">Deine Vora
       list.innerHTML = '<div class="finder-empty">Prüfe zuerst Fahrzeugart, Budget und Lademöglichkeit. Bei schnelleren Modellen fehlen teilweise Reichweitenangaben; diese führen wir bewusst nicht als sicheren Treffer auf. <a href="/modelle/">Zur vollständigen Modellübersicht →</a></div>';
     }
     selected.forEach(({product:p,range}) => {
+      const thumb = localThumb(p);
       const reasons = [`${maxSpeed(p)} km/h als angegebene Höchstgeschwindigkeit`, `ab ${euro(p.price)} im Budget`, `mindestens ${range} km als veröffentlichter Reichweitenwert`];
       if (answers.charge === 'removable') reasons.push('Akku als entnehmbar dokumentiert');
       const checks = ['Tatsächliche Reichweite bei Kälte, Tempo und Zuladung prüfen','Fahrzeugklasse und Fahrerlaubnis für die konkrete Variante klären'];
@@ -101,7 +107,7 @@ root.innerHTML = `<div class="finder-results-head"><p class="eyebrow">Deine Vora
       else if (answers.charge === 'unknown') checks.push('Ladeort und Akkuart vor einer Entscheidung klären');
       const article = document.createElement('article');
       article.className = 'finder-result';
-      article.innerHTML = `<p class="finder-category">${escapeHtml(p.category)}</p><h3>${escapeHtml(p.name)}</h3><div class="finder-facts"><span>${escapeHtml(p.speed || 'Tempo offen')}</span><span>${escapeHtml(p.range || 'Reichweite offen')}</span><span>ab ${euro(p.price)}</span></div><p class="finder-reason"><strong>Warum in der Auswahl:</strong> ${escapeHtml(reasons.join('; '))}.</p><p class="finder-check"><strong>Vor dem Kauf:</strong> ${escapeHtml(checks.join('; '))}.</p><a href="${escapeHtml(modelUrl(p))}">Modell bei Rollerkompass ansehen →</a>`;
+      article.innerHTML = `<div class="finder-result-head"><div><p class="finder-category">${escapeHtml(p.category)}</p><h3>${escapeHtml(p.name)}</h3></div>${thumb?`<figure class="finder-thumb"><img src="${escapeHtml(thumb.src)}" alt="" loading="lazy" width="92" height="92">${thumb.archive?'<figcaption>Archivfoto</figcaption>':''}</figure>`:''}</div><div class="finder-facts"><span>${escapeHtml(p.speed || 'Tempo offen')}</span><span>${escapeHtml(p.range || 'Reichweite offen')}</span><span>ab ${euro(p.price)}</span></div><p class="finder-reason"><strong>Warum in der Auswahl:</strong> ${escapeHtml(reasons.join('; '))}.</p><p class="finder-check"><strong>Vor dem Kauf:</strong> ${escapeHtml(checks.join('; '))}.</p><a href="${escapeHtml(modelUrl(p))}">Modell bei Rollerkompass ansehen →</a>`;
       list.append(article);
     });
     root.querySelector('#finder-reset').addEventListener('click',() => {step=0;showQuestion();root.querySelector('h2').focus();});
@@ -111,7 +117,7 @@ root.innerHTML = `<div class="finder-results-head"><p class="eyebrow">Deine Vora
     if (!products.length) {root.innerHTML = '<p class="finder-empty">Die Modelldaten konnten nicht geladen werden. <a href="/modelle/">Alle Modelle ansehen</a>.</p>';return;}
     if (step < questions.length) showQuestion(); else showResults();
   }
-  window.RKFinder = {candidatesFor,conservativeRange,maxSpeed,removable};
+  window.RKFinder = {candidatesFor,conservativeRange,maxSpeed,removable,localThumb};
   render();
 })();
 
