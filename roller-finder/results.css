@@ -1,0 +1,2 @@
+.finder-result-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}.finder-result-head>div{min-width:0}.finder-thumb{flex:0 0 92px;width:92px;margin:0;text-align:center}.finder-thumb img{display:block;width:92px;height:92px;object-fit:contain;border-radius:11px;background:#f2f8f6}.finder-thumb figcaption{margin-top:3px;color:#61737c;font-size:10px;line-height:1.2}.finder-result .finder-facts{margin-top:7px}@media(max-width:540px){.finder-thumb{flex-basis:72px;width:72px}.finder-thumb img{width:72px;height:72px}}
+
