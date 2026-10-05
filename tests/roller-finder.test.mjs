@@ -11,7 +11,7 @@ const script = fs.readFileSync(path.join(root,'roller-finder','finder.js'),'utf8
 vm.runInNewContext(script,context);
 
 const finder = context.window.RKFinder;
-assert.equal(context.window.PRODUCTS.length,43);
+assert.equal(context.window.PRODUCTS.length,45);
 assert.equal(finder.conservativeRange(context.window.PRODUCTS.find(p=>p.slug==='falcon-blei')),50);
 assert.ok(context.window.PRODUCTS.every(p=>finder.localThumb(p)?.src.startsWith('/assets/')));
 assert.equal(finder.localThumb(context.window.PRODUCTS.find(p=>p.slug==='flow-li')).archive,true);

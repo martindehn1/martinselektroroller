@@ -74,9 +74,9 @@ for(const [url,html] of pages) {
   }
 }
 const pctx={window:{}};vm.runInNewContext(read('products.js'),pctx);const products=pctx.window.PRODUCTS;
-assert.equal(products.length,43);
+assert.equal(products.length,45);
 assert.equal(products.filter(p=>p.personalPhoto).length,10);
-for(const [url,count] of [['/',9],['/modelle/',43],['/kabinenroller/',6],['/seniorenmobile/',2],['/e-roller/',16]]) {
+for(const [url,count] of [['/',9],['/modelle/',45],['/kabinenroller/',7],['/seniorenmobile/',3],['/e-roller/',16]]) {
   const html=pages.get(origin+url);
   assert.equal((html.match(/class="product-card"/g)||[]).length,count,url+' static model coverage');
   const events={};
@@ -89,7 +89,7 @@ for(const [url,count] of [['/',9],['/modelle/',43],['/kabinenroller/',6],['/seni
   assert(el.innerHTML.includes('Kein Modell gefunden.'),url+' empty search');
 }
 assert.equal(products.find(p=>p.slug==='vita-care-neo').price,2499);
-assert.equal(products.find(p=>p.slug==='falcon-double').price,1999);
+assert.equal(products.find(p=>p.slug==='falcon-double').price,2399);
 assert(read('seniorenmobile/vita-care-neo/index.html').includes('/assets/futura-vitacare-neo-960.webp'));
 console.log(`PASS: ${urls.length} canonical pages, unique metadata, valid JSON-LD, ${links} local references, static/client catalogues, search and source updates.`);
 

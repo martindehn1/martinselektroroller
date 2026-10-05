@@ -83,7 +83,7 @@ window.PRODUCTS = [
     "name": "Vita Care 4000",
     "fullName": "Vierrädriges Seniorenmobil Vita Care 4000, 25 km/h",
     "category": "Seniorenmobile",
-    "price": 1799,
+    "price": 1999,
     "speed": "25 km/h",
     "range": "bis zu 50 km",
     "power": "1.000 W",
@@ -93,7 +93,7 @@ window.PRODUCTS = [
     "isAffiliate": true,
     "offerLabel": "Angebot",
     "sourceUrl": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/vita-care-4000",
-    "verifiedAt": "September 2026",
+    "verifiedAt": "05.10.2026",
     "personalPhoto": {
       "src": "assets/produkt-vitacare-960.webp",
       "srcset": "assets/produkt-vitacare-480.webp 480w, assets/produkt-vitacare-960.webp 960w",
@@ -109,7 +109,7 @@ window.PRODUCTS = [
     "name": "Falcon Double",
     "fullName": "E-Roller Falcon Double mit Lithium-Akku",
     "category": "E-Roller",
-    "price": 1999,
+    "price": 2399,
     "speed": "25 / 45 km/h",
     "range": "bis zu 80 km (ECO) / 60 km (Speed) je Akku",
     "power": "bis zu 3.400 W",
@@ -128,7 +128,7 @@ window.PRODUCTS = [
     },
     "detailUrl": "/e-roller/falcon/",
     "sourceUrl": "https://elektroroller-futura.de/shop/elektroroller/e-scooter-falcon",
-    "verifiedAt": "13.09.2026"
+    "verifiedAt": "05.10.2026"
   },
   {
     "id": 4102,
@@ -692,7 +692,7 @@ window.PRODUCTS = [
     "name": "THUNDER-S",
     "fullName": "E-Motorrad THUNDER-S",
     "category": "E-Motorrad & Enduro",
-    "price": 2699,
+    "price": 3199,
     "speed": "80 km/h",
     "range": null,
     "power": null,
@@ -704,7 +704,8 @@ window.PRODUCTS = [
     "imageWidth": 568,
     "imageHeight": 649,
     "imageSourceUrl": "https://elektroroller-futura.de/18037-big_default/thunder.jpg",
-    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/thunder"
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektroroller/thunder",
+    "verifiedAt": "05.10.2026"
   },
   {
     "id": 417,
@@ -943,5 +944,47 @@ window.PRODUCTS = [
     "imageHeight": 649,
     "imageSourceUrl": "https://elektroroller-futura.de/19035-big_default/elektro-kabinenroller-e-move.jpg",
     "imageSourcePage": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/elektro-kabinenroller-e-move"
+  },
+  {
+    "id": 3500,
+    "slug": "dora-li",
+    "name": "Dora Li",
+    "fullName": "Mopedauto Dora Li mit LFP-Lithium-Akku",
+    "category": "Kabinenroller",
+    "price": 8999,
+    "speed": "45 km/h",
+    "range": "bis zu 100 km",
+    "power": null,
+    "battery": "60 V / 100 Ah LFP-Lithium",
+    "image": "assets/futura-dora-li.jpg",
+    "affiliateUrl": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/elektro-kabinenroller-dora?affp=17205#/geschwindigkeit_auswahlen-45_km_h/farbe-weiss",
+    "isAffiliate": true,
+    "offerLabel": "Angebot",
+    "sourceUrl": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/elektro-kabinenroller-dora",
+    "verifiedAt": "05.10.2026",
+    "imageSourceUrl": "https://elektroroller-futura.de/19600-small_default/elektro-kabinenroller-dora.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/elektro-kabinenroller-dora"
+  },
+  {
+    "id": 3296,
+    "slug": "vitaeco-li",
+    "name": "VitaEco Li",
+    "fullName": "E-Mobil VitaEco Li mit Lithium-Akku",
+    "category": "Seniorenmobile",
+    "price": 1799,
+    "speed": "25 km/h",
+    "range": null,
+    "power": null,
+    "battery": "Lithium-Akku",
+    "image": "assets/futura-vitaeco-li.jpg",
+    "affiliateUrl": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/senioren-eco-li?affp=17205",
+    "isAffiliate": true,
+    "offerLabel": "Angebot",
+    "sourceUrl": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/senioren-eco-li",
+    "verifiedAt": "05.10.2026",
+    "imageSourceUrl": "https://elektroroller-futura.de/18391-big_default/senioren-eco-li.jpg",
+    "imageSourcePage": "https://elektroroller-futura.de/shop/elektromobilitaet-fuer-senioren/senioren-eco-li",
+    "imageWidth": 568,
+    "imageHeight": 649
   }
 ];

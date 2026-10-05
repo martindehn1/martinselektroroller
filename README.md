@@ -6,7 +6,7 @@ Live: https://rollerkompass.de/
 
 ## Inhalt
 
-- 43 Modelle mit Suche und Filtern, darunter sechs Kabinenroller und zwei Seniorenmobile
+- 45 Modelle mit Suche und Filtern, darunter sieben Kabinenroller und drei Seniorenmobile
 - fünf Kabinenroller mit Empfehlung und ehrlichem Hinweis
 - Direktvergleich für bis zu drei Modelle
 - transparente Affiliate-Kennzeichnung und Herstellerquellen
@@ -40,7 +40,7 @@ ausgelöste Lauf „Deploy Now: Deploy to IONOS“.
 Seit 13.09.2026 gibt es zehn zusätzliche statische Seiten: eine vollständige
 Modellübersicht, drei Kategorien, drei ausführliche Modellchecks (Flow, Neo,
 Falcon), das Autorenprofil, die Vergleichsmethode und die Probefahrt-Checkliste.
-Alle 43 Modelle sind unter `/modelle/` im initialen HTML verfügbar. Die Startseite
+Alle 45 Modelle sind unter `/modelle/` im initialen HTML verfügbar. Die Startseite
 behält ihre priorisierte Auswahl. Modell- und Kategorieverweise sind normale
 HTML-Links; die alten Modell-Anker funktionieren weiterhin.
 
@@ -140,6 +140,6 @@ Die Messung zählt zusätzlich Seitenaufrufe aller 11 Inhaltsseiten, getrennt vo
 
 `/elektroroller-futura/` wird durch `scripts/futura-entry.mjs` im vorhandenen SEO-Generator erstellt. Die Seite enthält Martins persönliche Auswahl Flow Li, Dora Li, HL 6.0 Premium Duo und VitaCare Neo, einen Flow-Dora-Vergleich sowie eine statische Tabelle und FAQ. Sinngemäße persönliche Einschätzungen sind entsprechend beschriftet. Es werden keine Verkaufsspitzenplätze oder eigenen Dora-/Duo-Fahrtests behauptet. Neue Herstellerbilder liegen lokal; Quelle für Dora ist die Futura-Produktseite `elektro-kabinenroller-dora`, für Duo `e-scooter-6-premium-duo`. Produktdaten zu Flow, Dora und Duo wurden am 15.09.2026 abgeglichen.
 
-Dora ist auf der neuen Einstiegsseite zusätzlich zur bisherigen 43-Modell-Übersicht enthalten. Der Tracker und der getrennte Statistikdienst erlauben die neue Seite und den neuen Dora-Link. Vorhandene Partnerlinks bleiben unverändert; für Dora, Flow und Neo wird kein Partnerparameter erfunden.
+Dora Li steht seit 05.10.2026 auch in der Modellübersicht. VitaEco Li ergänzt dort den Lithium-Einstieg bei den Seniorenfahrzeugen. Der Tracker und der getrennte Statistikdienst erlauben beide Modelle. Preise für Vita Care 4000, Falcon Double und THUNDER-S wurden mit der Futura-Partnerliste am 05.10.2026 abgeglichen. Die zugehörigen Produktseiten meldeten beim direkten Abruf teilweise keinen Zugriff; maßgeblich bleibt das tatsächliche Angebot bei Futura.
 
 Die Rückruffunktion ist in `scripts/callback-section.mjs`, `callback.js` und `callback-config.json` vorbereitet. Sie bleibt aus, bis Martin die öffentlich zu verwendende Geschäftsanschrift und Kontakt-E-Mail liefert. Bei Aktivierung müssen Frontend-Konfiguration und `CALLBACKS_ENABLED` im geschützten Statistikdienst gemeinsam freigeschaltet sein. Das Formular übermittelt nur Name, Telefonnummer, Modell-/Zeitwahl und die ausdrückliche Rückrufbestätigung. Kontakte stehen ausschließlich unter `/rueckrufe` der Statistik; es gibt keine automatische E-Mail und keine Weitergabe an Futura. Die Anleitung ist eine Beschreibung der Implementierung, keine Zusicherung einer vollständig rechtlich geprüften Datenschutzerklärung.
