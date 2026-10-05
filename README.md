@@ -61,8 +61,8 @@ müssen mit der konkret beschriebenen Variante übereinstimmen.
 Das Google-Verifizierungs-Tag in `index.html` bleibt dauerhaft erhalten. Die
 Sitemap liegt unter `https://rollerkompass.de/sitemap.xml`. `.htaccess` aktiviert
 unterstützte Textkompression und Caching; HTML wird bei erneutem Abruf validiert.
-Impressum und Datenschutz enthalten weiterhin einen vorhandenen Platzhalter;
-vollständige Betreiberangaben müssen vor einer inhaltlichen Ergänzung vorliegen.
+Die Datenschutzerklärung liegt unter `/datenschutz/` und ist im Footer
+verlinkt. Das Impressum ist noch nicht erstellt.
 
 ## Persönliche Produktfotos
 

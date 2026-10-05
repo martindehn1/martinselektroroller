@@ -72,7 +72,7 @@ function nav() {
   return `<header class="page-header"><nav class="nav shell" aria-label="Hauptnavigation"><a class="brand" href="/" aria-label="Rollerkompass Startseite"><span class="brand-word">rollerkompass<span>.</span></span><small>mit Martin Dehn</small></a><div class="nav-links">${links}</div><details class="mobile-nav"><summary>Menü <span aria-hidden="true">☰</span></summary><div>${links}${link('/ratgeber/probefahrt-checkliste/','Probefahrt-Checkliste')}${link('/ueber-martin-dehn/','Über Martin Dehn')}</div></details></nav></header>`;
 }
 function footer() {
-  return `<footer class="footer"><div class="shell footer-main"><a class="brand footer-brand" href="/"><span class="brand-word">rollerkompass<span>.</span></span><small>mit Martin Dehn</small></a><p>Persönliche Orientierung für E-Roller, Kabinenroller und Seniorenmobile.</p><div class="footer-links">${link('/modelle/','Alle Modelle')}${link('/ueber-martin-dehn/','Über Martin Dehn')}${link('/so-vergleichen-wir/','So vergleichen wir')}${link('/#transparenz','Futura-Partnerschaft')}</div></div><div class="shell footer-bottom"><span>© 2026 Rollerkompass</span>${link('/','Zur Startseite')}</div></footer>`;
+  return `<footer class="footer"><div class="shell footer-main"><a class="brand footer-brand" href="/"><span class="brand-word">rollerkompass<span>.</span></span><small>mit Martin Dehn</small></a><p>Persönliche Orientierung für E-Roller, Kabinenroller und Seniorenmobile.</p><div class="footer-links">${link('/modelle/','Alle Modelle')}${link('/ueber-martin-dehn/','Über Martin Dehn')}${link('/so-vergleichen-wir/','So vergleichen wir')}${link('/#transparenz','Futura-Partnerschaft')}</div></div><div class="shell footer-bottom"><span>© 2026 Rollerkompass</span>${link('/datenschutz/','Datenschutz')}${link('/','Zur Startseite')}</div></footer>`;
 }
 function crumbs(page) {
   const items = [['/','Startseite'], ...(page.parent ? [page.parent] : []), [page.url,page.label]];
@@ -182,7 +182,7 @@ home=home.replace('click-tracking.js?v=pageviews-20260915','click-tracking.js?v=
 home=home.replace(/(styles\.css|app\.js|products\.js)\?v=[^"\s]+/g,`$1?v=${version}`);
 home=home.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/,`<script type="application/ld+json">${JSON.stringify({'@context':'https://schema.org','@graph':[website,organization,author,{'@type':'WebPage','@id':origin+'/#page',url:origin+'/',name:'Kabinenroller und E-Roller vergleichen',primaryImageOfPage:origin+'/assets/martin-luca-hero-blau-1254.webp',isPartOf:{'@id':website['@id']},dateModified:updated,inLanguage:'de-DE'}]})}</script>`);
 fs.writeFileSync(path.join(root,'index.html'),home.split('\n').map(line=>line.trimEnd()).join('\n'));
-const locations=['/','/roller-finder/',...pages.map(p=>p.url)];
+const locations=['/','/roller-finder/','/datenschutz/',...pages.map(p=>p.url)];
 fs.writeFileSync(path.join(root,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${locations.map(url=>`  <url><loc>${origin+url}</loc><lastmod>${url==='/roller-finder/'?'2026-09-25':(pages.find(p=>p.url===url)?.updated || updated)}</lastmod></url>`).join('\n')}\n</urlset>\n`);
 console.log(`Generated ${pages.length} static pages, homepage catalogue, and ${locations.length} sitemap entries.`);
 
