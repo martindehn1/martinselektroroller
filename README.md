@@ -61,8 +61,8 @@ müssen mit der konkret beschriebenen Variante übereinstimmen.
 Das Google-Verifizierungs-Tag in `index.html` bleibt dauerhaft erhalten. Die
 Sitemap liegt unter `https://rollerkompass.de/sitemap.xml`. `.htaccess` aktiviert
 unterstützte Textkompression und Caching; HTML wird bei erneutem Abruf validiert.
-Die Datenschutzerklärung liegt unter `/datenschutz/` und ist im Footer
-verlinkt. Das Impressum ist noch nicht erstellt.
+Datenschutzerklärung und Impressum liegen unter `/datenschutz/` und
+`/impressum/` und sind im Footer verlinkt.
 
 ## Persönliche Produktfotos
 
@@ -142,4 +142,4 @@ Die Messung zählt zusätzlich Seitenaufrufe aller 11 Inhaltsseiten, getrennt vo
 
 Dora Li steht seit 05.10.2026 auch in der Modellübersicht. VitaEco Li ergänzt dort den Lithium-Einstieg bei den Seniorenfahrzeugen. Der Tracker und der getrennte Statistikdienst erlauben beide Modelle. Preise für Vita Care 4000, Falcon Double und THUNDER-S wurden mit der Futura-Partnerliste am 05.10.2026 abgeglichen. Die zugehörigen Produktseiten meldeten beim direkten Abruf teilweise keinen Zugriff; maßgeblich bleibt das tatsächliche Angebot bei Futura.
 
-Die Rückruffunktion ist in `scripts/callback-section.mjs`, `callback.js` und `callback-config.json` vorbereitet. Sie bleibt aus, bis Martin die öffentlich zu verwendende Geschäftsanschrift und Kontakt-E-Mail liefert. Bei Aktivierung müssen Frontend-Konfiguration und `CALLBACKS_ENABLED` im geschützten Statistikdienst gemeinsam freigeschaltet sein. Das Formular übermittelt nur Name, Telefonnummer, Modell-/Zeitwahl und die ausdrückliche Rückrufbestätigung. Kontakte stehen ausschließlich unter `/rueckrufe` der Statistik; es gibt keine automatische E-Mail und keine Weitergabe an Futura. Die Anleitung ist eine Beschreibung der Implementierung, keine Zusicherung einer vollständig rechtlich geprüften Datenschutzerklärung.
+Die Rückruffunktion ist in `scripts/callback-section.mjs`, `callback.js` und `callback-config.json` vorbereitet und bleibt bis zu einer gesonderten Freigabe deaktiviert. Bei Aktivierung müssen Frontend-Konfiguration und `CALLBACKS_ENABLED` im geschützten Statistikdienst gemeinsam freigeschaltet und die Datenschutzerklärung für die dann erhobenen Angaben ergänzt werden. Das Formular übermittelt nur Name, Telefonnummer, Modell-/Zeitwahl und die ausdrückliche Rückrufbestätigung. Kontakte stehen ausschließlich unter `/rueckrufe` der Statistik; es gibt keine automatische E-Mail und keine Weitergabe an Futura. Die Anleitung ist eine Beschreibung der Implementierung, keine Zusicherung einer vollständig rechtlich geprüften Datenschutzerklärung.
